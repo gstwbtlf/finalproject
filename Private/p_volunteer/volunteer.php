@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="Private/p_volunteer/volunteer.css">
 </head>
 <body>
-    
+    <?php 
+        echo "Volunteer List Page";
+    ?>    
 </body>
 </html>

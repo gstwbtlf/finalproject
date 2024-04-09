@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="Public/p_forgotpswd/forgotpswd.css">
 </head>
 <body>
-    
+    <?php 
+        echo "Forgot Password Page";
+    ?>   
 </body>
 </html>

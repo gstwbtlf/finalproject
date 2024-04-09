@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="Private/p_volpanel/volpanel.css">
 </head>
 <body>
-    
+    <?php 
+        echo "Volunteer Panel Page";
+    ?>    
 </body>
 </html>

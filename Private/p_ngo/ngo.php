@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="Private/p_ngo/ngo.css">
 </head>
 <body>
-    
+    <?php 
+        echo "NGO List Page";
+    ?>    
 </body>
 </html>

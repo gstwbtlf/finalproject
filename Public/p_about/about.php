@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="Public/p_about/about.css">
 </head>
 <body>
-    
+    <?php 
+        echo "About Page";
+    ?>    
+     <br>
+    <a href="../.."> 
+        <button>Home</button>
+    </a>
 </body>
 </html>

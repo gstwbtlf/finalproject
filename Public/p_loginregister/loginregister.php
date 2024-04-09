@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="Public/p_loginregister/loginregister.css">
 </head>
 <body>
-    
+<?php 
+        echo "Login Register Page";
+    ?>
+     <br>
+    <a href="../.."> 
+        <button>Home</button>
+    </a>
 </body>
 </html>

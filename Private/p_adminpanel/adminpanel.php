@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="Private/p_adminpanel/adminpanel.css">
 </head>
 <body>
-    
+    <?php 
+        echo "Admin Panel Page";
+    ?>    
 </body>
 </html>

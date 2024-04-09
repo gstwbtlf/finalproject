@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="Private/p_forbidden/forbidden.css">
 </head>
 <body>
-    
+    <?php 
+        echo "Forbidden Not Authorized Page";
+    ?>    
 </body>
 </html>
