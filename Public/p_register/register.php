@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Public/p_loginregister/loginregister.css">
+    <link rel="stylesheet" href="Public/p_register/register.css">
 </head>
 <body>
+
 <?php 
-        echo "Login Register Page";
+        echo "Register Page";
     ?>
-     <br>
-    <a href="../.."> 
+
+    <br>
+
+     <a href="../.."> 
         <button>Home</button>
     </a>
-    <br>
-    <a href=""> 
-        <button>Login</button>
-    </a>
+   
     <br>
     <a href="../../Public/p_register_vol/registervol.php"> 
         <button>Register Volunteer</button>
     </a>
+    
     <br>
+   
     <a href="../../Public/p_register_ngo/registerngo.php"> 
         <button>Register NGO</button>
     </a>
+
 </body>
 </html>

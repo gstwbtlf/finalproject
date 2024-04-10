@@ -15,7 +15,10 @@
         <button>About</button>
     </a>
     <br>
-    <a href="Public/p_loginregister/loginregister.php">
-        <button>Login & Register</button></a>
+    <a href="Public/p_login/login.php">
+        <button>Login</button></a>
+        <br>
+    <a href="Public/p_register/register.php">
+        <button>Register</button></a>
 </body>
 </html>
