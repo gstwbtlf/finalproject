@@ -40,6 +40,11 @@
             <input id="pocemail" type="text" name="pocemail" placeholder="Point of Contact Email">
 
             <br>
+
+            <label for="pocphonenum">Point of Contact Phone Number?</label>
+            <input id="pocphonenum" type="text" name="pocphonenum" placeholder="Point of Contact Phone Number">
+
+            <br>
         
             <label for="ngopswd">Password?</label>
             <input id="ngopswd" type="text" name="ngopswd" placeholder="Password">
@@ -53,6 +58,16 @@
                 <option value="concern3">Concern 3</option>
                 <option value="concern4">Concern 4</option>
             </select>
+
+            <br>
+        
+        <label for="compmiss">Company Mission Statement</label>
+        <input id="compmiss" type="text" name="compmiss" placeholder="Company Mission Statement">
+
+            <br>
+        
+        <label for="compweb">Company Website URL</label>
+        <input id="compweb" type="text" name="compweb" placeholder="Company Website URL">
 
             <br>
 

@@ -35,9 +35,24 @@
             <input id="volemail" type="text" name="volemail" placeholder="Volunteer Email">
 
             <br>
+
+            <label for="volphonenum">Volunteer Phone Number?</label>
+            <input id="volphonenum" type="text" name="volphonenum" placeholder="Volunteer Phone Number (including area code)">
+
+            <br>
         
             <label for="volpswd">Password?</label>
             <input id="volpswd" type="text" name="volpswd" placeholder="Password">
+
+            <br>
+
+            <label for="availnow">Are you available?</label>
+            <select id="availnow" name="availnow">
+            <option value="avail1">Now</option>
+            <option value="avail2">In 1 Month</option>
+            <option value="avail3">In 6 Months</option>
+            <option value="avail4">In 12 Months</option>
+            </select>
 
             <br>
 
@@ -51,10 +66,31 @@
 
             <br>
 
-            <label for="backcheck">Criminal Background Check?</label>
-            <select id="backcheck" name="backcheck">
-                <option value="hours1">Yes</option>
-                <option value="hours2">No</option>
+            <label for="backgroundcheck">Criminal Background Check?</label>
+            <select id="backgroundcheck" name="backgroundcheck">
+            <option value="backcheck1">Pending</option>
+            <option value="backcheck2">Yes</option>
+            <option value="backcheck3">No</option>
+            </select>
+
+            <br>
+
+            <label for="education">Highest Level of Education?</label>
+            <select id="education" name="education">
+                <option value="edu1">None</option>
+                <option value="edu2">High School</option>
+                <option value="edu3">College</option>
+                <option value="edu4">University</option>
+            </select>
+
+            <br>
+
+            <label for="areainterest">Area of Interest?</label>
+            <select id="areainterest" name="areainterest">
+            <option value="int1">Area1</option>
+            <option value="int2">Area2</option>
+            <option value="int3">Aare3</option>
+            <option value="int4">Area4</option>
             </select>
 
             <br>
