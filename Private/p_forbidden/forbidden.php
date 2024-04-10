@@ -10,5 +10,10 @@
     <?php 
         echo "Forbidden Not Authorized Page";
     ?>    
+
+    <br>
+    <a href="../.."> 
+        <button>Home</button>
+    </a>
 </body>
 </html>

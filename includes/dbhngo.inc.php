@@ -3,7 +3,7 @@
 
 
     //data source name = which database to connect to
-    $dsn = "mysql:host=localhost;dbname=gl_users";
+    $dsn = "mysql:host=localhost;dbname=guardianlink_db";
     //database username
     $dbusername = "root";
     //database password

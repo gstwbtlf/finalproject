@@ -20,83 +20,88 @@
     <br>
 
     <main>
-        <form method="post">
-            <label for="acctvolname">Username?</label>
-            <input id="acctvolname" type="text" name="acctvolname" placeholder="Username">
+        <form action="../../includes/formhandlervol.inc.php" method="post">
+            <label for="username">Username?</label>
+            <input id="username" type="text" name="username" placeholder="Username">
 
             <br>
 
-            <label for="volname">Volunteer Name?</label>
-            <input id="volname" type="text" name="volname" placeholder="Volunteer Name">
+            <label for="firstname">Volunteer First Name?</label>
+            <input id="firstname" type="text" name="firstname" placeholder="Volunteer First Name">
 
             <br>
 
-            <label for="volemail">Volunteer Email?</label>
-            <input id="volemail" type="text" name="volemail" placeholder="Volunteer Email">
+            <label for="lastname">Volunteer Last Name?</label>
+            <input id="lastname" type="text" name="lastname" placeholder="Volunteer Last Name">
 
             <br>
 
-            <label for="volphonenum">Volunteer Phone Number?</label>
-            <input id="volphonenum" type="text" name="volphonenum" placeholder="Volunteer Phone Number (including area code)">
+            <label for="email">Volunteer Email?</label>
+            <input id="email" type="text" name="email" placeholder="Volunteer Email">
+
+            <br>
+
+            <label for="phonenum">Volunteer Phone Number?</label>
+            <input id="phonenum" type="text" name="phonenum" placeholder="Volunteer Phone Number (including area code)">
 
             <br>
         
-            <label for="volpswd">Password?</label>
-            <input id="volpswd" type="text" name="volpswd" placeholder="Password">
+            <label for="pswd">Password?</label>
+            <input id="pswd" type="text" name="pswd" placeholder="Password">
 
             <br>
 
             <label for="availnow">Are you available?</label>
             <select id="availnow" name="availnow">
-            <option value="avail1">Now</option>
-            <option value="avail2">In 1 Month</option>
-            <option value="avail3">In 6 Months</option>
-            <option value="avail4">In 12 Months</option>
+            <option value="Now">Now</option>
+            <option value="In 1 Month">In 1 Month</option>
+            <option value="In 6 Months">In 6 Months</option>
+            <option value="In 12 Months">In 12 Months</option>
             </select>
 
             <br>
 
-            <label for="numhours">Number of Hours Available Per Week?</label>
-            <select id="numhours" name="numhours">
-                <option value="hours1">0-1</option>
-                <option value="hours2">2-4</option>
-                <option value="hours3">4-8</option>
-                <option value="hours4">9+</option>
+            <label for="volhours">Number of Hours Available Per Week?</label>
+            <select id="volhours" name="volhours">
+                <option value="0-1">0-1</option>
+                <option value="2-4">2-4</option>
+                <option value="4-8">4-8</option>
+                <option value="9+">9+</option>
             </select>
 
             <br>
 
-            <label for="backgroundcheck">Criminal Background Check?</label>
-            <select id="backgroundcheck" name="backgroundcheck">
-            <option value="backcheck1">Pending</option>
-            <option value="backcheck2">Yes</option>
-            <option value="backcheck3">No</option>
+            <label for="backcheck">Criminal Background Check?</label>
+            <select id="backcheck" name="backcheck">
+            <option value="Pending">Pending</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
             </select>
 
             <br>
 
             <label for="education">Highest Level of Education?</label>
             <select id="education" name="education">
-                <option value="edu1">None</option>
-                <option value="edu2">High School</option>
-                <option value="edu3">College</option>
-                <option value="edu4">University</option>
+                <option value="None">None</option>
+                <option value="High School">High School</option>
+                <option value="College">College</option>
+                <option value="University">University</option>
             </select>
 
             <br>
 
             <label for="areainterest">Area of Interest?</label>
             <select id="areainterest" name="areainterest">
-            <option value="int1">Area1</option>
-            <option value="int2">Area2</option>
-            <option value="int3">Aare3</option>
-            <option value="int4">Area4</option>
+            <option value="Area1">Area1</option>
+            <option value="Area2">Area2</option>
+            <option value="Area3">Area3</option>
+            <option value="Area4">Area4</option>
             </select>
 
             <br>
 
-            <label for="onlinepro">LinkedIn Page?</label>
-            <input id="onlinepro" type="text" name="onlinepro" placeholder="LinkedIn URL">
+            <label for="website">LinkedIn Page?</label>
+            <input id="website" type="text" name="website" placeholder="LinkedIn URL">
 
             <br>
             

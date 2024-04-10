@@ -20,14 +20,19 @@
     <br>  
 
     <main>
-        <form method="post">
-            <label for="acctngoname">Username?</label>
-            <input id="acctngoname" type="text" name="acctngoname" placeholder="Username">
+        <form action="../../includes/formhandlerngo.inc.php" method="post">
+            <label for="username">Username?</label>
+            <input id="username" type="text" name="username" placeholder="Username">
 
             <br>
 
-            <label for="pocname">Point of Contact Name?</label>
-            <input id="pocname" type="text" name="pocname" placeholder="Point of Contact Name">
+            <label for="firstname">Point of Contact First Name?</label>
+            <input id="firstname" type="text" name="firstname" placeholder="Point of Contact First Name">
+
+            <br>
+
+            <label for="lastname">Point of Contact Last Name?</label>
+            <input id="lastname" type="text" name="lastname" placeholder="Point of Contact Last Name">
 
             <br>
 
@@ -36,38 +41,38 @@
 
             <br>
 
-            <label for="pocemail">Point of Contact Email?</label>
-            <input id="pocemail" type="text" name="pocemail" placeholder="Point of Contact Email">
+            <label for="email">Point of Contact Email?</label>
+            <input id="email" type="text" name="email" placeholder="Point of Contact Email">
 
             <br>
 
-            <label for="pocphonenum">Point of Contact Phone Number?</label>
-            <input id="pocphonenum" type="text" name="pocphonenum" placeholder="Point of Contact Phone Number">
+            <label for="phonenum">Point of Contact Phone Number?</label>
+            <input id="phonenum" type="text" name="phonenum" placeholder="Point of Contact Phone Number">
 
             <br>
         
-            <label for="ngopswd">Password?</label>
-            <input id="ngopswd" type="text" name="ngopswd" placeholder="Password">
+            <label for="pswd">Password?</label>
+            <input id="pswd" type="text" name="pswd" placeholder="Password">
 
             <br>
 
-            <label for="areasofconcern">Areas of Concern?</label>
-            <select id="areasofconcern" name="areasofconcern">
-                <option value="concern1">Concern 1</option>
-                <option value="concern2">Concern 2</option>
-                <option value="concern3">Concern 3</option>
-                <option value="concern4">Concern 4</option>
+            <label for="ngoneeds">Areas of Concern?</label>
+            <select id="ngoneeds" name="ngoneeds">
+                <option value="Concern 1">Concern 1</option>
+                <option value="Concern 2">Concern 2</option>
+                <option value="Concern 3">Concern 3</option>
+                <option value="Concern 4">Concern 4</option>
             </select>
 
             <br>
         
-        <label for="compmiss">Company Mission Statement</label>
-        <input id="compmiss" type="text" name="compmiss" placeholder="Company Mission Statement">
+        <label for="missionstmt">Company Mission Statement</label>
+        <input id="missionstmt" type="text" name="missionstmt" placeholder="Company Mission Statement">
 
             <br>
         
-        <label for="compweb">Company Website URL</label>
-        <input id="compweb" type="text" name="compweb" placeholder="Company Website URL">
+        <label for="website">Company Website URL</label>
+        <input id="website" type="text" name="website" placeholder="Company Website URL">
 
             <br>
 
