@@ -13,12 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $missionstmt = $_POST["missionstmt"];
 
     try {
-        require_once "dbhngo.inc.php";
+        require_once "dbh.inc.php";
 
         $query = "INSERT INTO glngousers (username, firstname, lastname, pswd, email, phonenum, website, orgname, ngoneeds, missionstmt) VALUES (:username, :firstname, :lastname, :pswd, :email, :phonenum, :website, :orgname, :ngoneeds, :missionstmt);";
     
         $stmt = $pdo->prepare($query);
 
+        //hash password
         $options = [
             'cost' => 12
         ];
