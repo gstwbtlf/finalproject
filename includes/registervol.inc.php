@@ -56,4 +56,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 } else{
     header("Location: ../Private/p_forbidden/forbidden.php");
+    die();
 }

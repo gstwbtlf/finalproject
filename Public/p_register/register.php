@@ -10,6 +10,7 @@
 
 <?php 
         echo "Register Page";
+
     ?>
 
     <br>

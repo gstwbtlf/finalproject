@@ -20,7 +20,7 @@
     <br>
 
     <main>
-        <form action="../../includes/formhandlervol.inc.php" method="post">
+        <form action="../../includes/registervol.inc.php" method="post">
             <label for="username">Username?</label>
             <input id="username" type="text" name="username" placeholder="Username">
 
