@@ -52,44 +52,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         //if error message, let user know and send back to register page
         if ($errors) {
             $_SESSION["errorsvol_register"] = $errors;
+
             header("Location: ../Public/p_register_vol/registervol.php");
             die();
         }
 
 
+        //sign user into site when no errors present
+        createvol_user($pdo, $username, $firstname, $lastname, $pswd, $email, $phonenumber, $website, $availability, $weekhours, $backgroundcheck, $education, $areasofinterest);
 
-        $query = "INSERT INTO glvolusers (username, firstname, lastname, pswd, email, phonenum, website, availnow, volhours, backcheck, education, areainterest) VALUES (:username, :firstname, :lastname, :pswd, :email, :phonenum, :website, :availnow, :volhours, :backcheck, :education, :areainterest);";
-    
-        $stmt = $pdo->prepare($query);
-
-        //hash password
-        $options = [
-            'cost' => 12
-        ];
-        
-        $hashedPswd = password_hash($pswd, PASSWORD_BCRYPT, $options);
-
-        $stmt->bindParam(":username", $username);    
-        $stmt->bindParam(":firstname", $firstname);    
-        $stmt->bindParam(":lastname", $lastname);    
-        $stmt->bindParam(":pswd", $hashedPswd);    
-        $stmt->bindParam(":email", $email);    
-        $stmt->bindParam(":phonenum", $phonenumber);    
-        $stmt->bindParam(":website", $website);    
-        $stmt->bindParam(":availnow", $availability);    
-        $stmt->bindParam(":volhours", $weekhours);    
-        $stmt->bindParam(":backcheck", $backgroundcheck);    
-        $stmt->bindParam(":education", $education);    
-        $stmt->bindParam(":areainterest", $areasofinterest);    
- 
-        $stmt->execute();
+        header ("Location: ../Public/p_register_vol/registervol.php?register=success");
 
         $pdo = null;
         $stmt = null;
 
-        header ("Location: ../index.php");
-    
         die();
+
         
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());

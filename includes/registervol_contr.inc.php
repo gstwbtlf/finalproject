@@ -40,3 +40,9 @@ function isvol_email_registered(object $pdo, string $email) {
         return false;
     }
 }
+
+
+//login user if no errors
+function createvol_user(object $pdo, string $username, string $firstname, string $lastname, string $pswd, string $email, string $phonenum, string $website, string $availability, string $weekhours, string $backgroundcheck, string $education, string $areasofinterest) {
+    setvol_user($pdo, $username, $firstname, $lastname, $pswd, $email, $phonenum, $website, $availability, $weekhours, $backgroundcheck, $education, $areasofinterest);
+}

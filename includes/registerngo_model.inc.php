@@ -23,3 +23,30 @@ function getngo_email(object $pdo, string $email){
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     return $result;
 }
+
+
+function setngo_user(object $pdo, string $username, string $firstname, string $lastname, string $pswd, string $email, string $phonenum, string $website, string $organizationname, string $ngoneeds, string $missionstmt) {
+    $query = "INSERT INTO glngousers (username, firstname, lastname, pswd, email, phonenum, website, orgname, ngoneeds, missionstmt) VALUES (:username, :firstname, :lastname, :pswd, :email, :phonenum, :website, :orgname, :ngoneeds, :missionstmt);";
+    
+    $stmt = $pdo->prepare($query);
+   
+    //hash password
+    $options = [
+        'cost' => 12
+    ];
+
+    $hashedPswd = password_hash($pswd, PASSWORD_BCRYPT, $options);
+
+    $stmt->bindParam(":username", $username);    
+        $stmt->bindParam(":firstname", $firstname);    
+        $stmt->bindParam(":lastname", $lastname);    
+        $stmt->bindParam(":pswd", $hashedPswd);    
+        $stmt->bindParam(":email", $email);    
+        $stmt->bindParam(":phonenum", $phonenum);    
+        $stmt->bindParam(":website", $website);    
+        $stmt->bindParam(":orgname", $organizationname);    
+        $stmt->bindParam(":ngoneeds", $ngoneeds); 
+        $stmt->bindParam(":missionstmt", $missionstmt);       
+    
+    $stmt->execute();
+}

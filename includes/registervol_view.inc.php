@@ -13,5 +13,8 @@ function checkvol_register_errors() {
         }
 
         unset($_SESSION['errorsvol_register']);
+    } else if (isset($_GET["register"]) && $_GET["register"] === "success"){
+        echo '<br>';
+        echo '<p>Registration success!</p>';
     }
 }

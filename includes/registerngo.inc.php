@@ -50,39 +50,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         //if error message, let user know and send back to register page
         if ($errors) {
             $_SESSION["errorsngo_register"] = $errors;
+
             header("Location: ../Public/p_register_ngo/registerngo.php");
             die();
         }
 
 
-        $query = "INSERT INTO glngousers (username, firstname, lastname, pswd, email, phonenum, website, orgname, ngoneeds, missionstmt) VALUES (:username, :firstname, :lastname, :pswd, :email, :phonenum, :website, :orgname, :ngoneeds, :missionstmt);";
-    
-        $stmt = $pdo->prepare($query);
+        //sign user into site when no errors present
+        createngo_user($pdo, $username, $firstname, $lastname, $pswd, $email, $phonenumber, $website, $organizationname, $ngoneeds, $missionstmt);
 
-        //hash password
-        $options = [
-            'cost' => 12
-        ];
-        
-        $hashedPswd = password_hash($pswd, PASSWORD_BCRYPT, $options);
-
-        $stmt->bindParam(":username", $username);    
-        $stmt->bindParam(":firstname", $firstname);    
-        $stmt->bindParam(":lastname", $lastname);    
-        $stmt->bindParam(":pswd", $hashedPswd);    
-        $stmt->bindParam(":email", $email);    
-        $stmt->bindParam(":phonenum", $phonenumber);    
-        $stmt->bindParam(":website", $website);    
-        $stmt->bindParam(":orgname", $organizationname);    
-        $stmt->bindParam(":ngoneeds", $ngoneeds); 
-        $stmt->bindParam(":missionstmt", $missionstmt);        
- 
-        $stmt->execute();
+        header ("Location: ../Public/p_register_ngo/registerngo.php?register=success");
 
         $pdo = null;
         $stmt = null;
-
-        header ("Location: ../index.php");
     
         die();
         

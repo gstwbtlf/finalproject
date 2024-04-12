@@ -13,5 +13,8 @@ function checkngo_register_errors() {
         }
 
         unset($_SESSION['errorsngo_register']);
+    } else if (isset($_GET["register"]) && $_GET["register"] === "success"){
+        echo '<br>';
+        echo '<p>Registration success!</p>';
     }
 }

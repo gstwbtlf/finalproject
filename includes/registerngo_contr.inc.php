@@ -40,3 +40,9 @@ function isngo_email_registered(object $pdo, string $email) {
         return false;
     }
 }
+
+
+//login user if no errors
+function createngo_user(object $pdo, string $username, string $firstname, string $lastname, string $pswd, string $email, string $phonenum, string $website, string $orgname, string $ngoneeds, string $missionstmt) {
+    setngo_user($pdo, $username, $firstname, $lastname, $pswd, $email, $phonenum, $website, $orgname, $ngoneeds, $missionstmt);
+}
