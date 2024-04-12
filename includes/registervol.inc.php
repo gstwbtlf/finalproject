@@ -15,7 +15,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $areasofinterest = $_POST["areainterest"];
 
     try {
-        require_once "dbh.inc.php";
+        require_once 'dbh.inc.php';
+        require_once 'registervol_model.inc.php';
+        require_once 'registervol_contr.inc.php';
+
+        // ERROR HANDLERS
+       
+        //errors array
+        $errors = [];
+
+        //checks if all input fields in registration form has been filled with info
+        if (isvol_input_empty($username, $firstname, $lastname, $pswd, $email, $phonenumber, $website)) {
+            $errors["empty_input"] = "Fill in all fields!";
+        }
+
+        //if valid email submitted
+        if (isvol_email_invalid($email)) {
+            $errors["invalid_email"] = "Invalid email used!";
+        }
+
+        //if username is already taken
+        if (isvol_username_taken($pdo, $username)) {
+            $errors["username_taken"] = "Username already taken!";
+        }
+
+        //if email is already registered
+        if (isvol_email_registered($pdo, $email)) {
+            $errors["email_used"] = "Email already registered!";
+        }
+
+
+        //start session
+        require_once 'config_session.inc.php';
+
+        
+        //if error message, let user know and send back to register page
+        if ($errors) {
+            $_SESSION["errorsvol_register"] = $errors;
+            header("Location: ../Public/p_register_vol/registervol.php");
+            die();
+        }
+
+
 
         $query = "INSERT INTO glvolusers (username, firstname, lastname, pswd, email, phonenum, website, availnow, volhours, backcheck, education, areainterest) VALUES (:username, :firstname, :lastname, :pswd, :email, :phonenum, :website, :availnow, :volhours, :backcheck, :education, :areainterest);";
     

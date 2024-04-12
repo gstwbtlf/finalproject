@@ -3,7 +3,8 @@
 
 
     //data source name = which database to connect to
-    $dsn = "mysql:host=localhost;dbname=guardianlink_db";
+    $host = 'localhost';
+    $dbname = 'guardianlink_db';
     //database username
     $dbusername = "root";
     //database password
@@ -12,7 +13,7 @@
 
     // error handler for database connection
     try {
-        $pdo = new PDO($dsn, $dbusername, $dbpassword);
+        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $dbusername, $dbpassword);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();

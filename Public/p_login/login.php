@@ -20,8 +20,26 @@
 
     <br>
 
-    <a href=""> 
+    <form action="../../includes/login.inc.php" method="post">
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="Username">
+        <br>
+        <label for="pswd">Password</label>
+        <input type="text" name="pswd" placeholder="Password">
+        <br>
         <button>Login</button>
+    </form>
+
+    <br>
+
+    <a href="../../Private/p_volunteer/volunteer.php"> 
+        <button method="post">Volunteer List</button>
+    </a>
+
+    <br>
+
+    <a href="../../Private/p_ngo/ngo.php"> 
+        <button method="post">NGO List</button>
     </a>
 
     <br>
