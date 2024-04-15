@@ -14,6 +14,8 @@ require_once '../../includes/login_view.inc.php';
 </head>
 <body>
 
+
+
     <?php 
         echo "Login Page";
     ?>
@@ -42,7 +44,10 @@ require_once '../../includes/login_view.inc.php';
                 <input type="text" name="username" placeholder="Username">
                 <br>
                 <label for="pswd">Password</label>
-                <input type="text" name="pswd" placeholder="Password">
+                <!-- <input type="text" name="pswd" placeholder="Password"> -->
+                <input type ="password" id="pswdvol" placeholder="Password">
+                <br>
+                <input type="checkbox" onclick="showVolPswd()">Show Password
                 <br>
                 <button>Login Volunteer</button>
             </form>
@@ -54,7 +59,10 @@ require_once '../../includes/login_view.inc.php';
                 <input type="text" name="username" placeholder="Username">
                 <br>
                 <label for="pswd">Password</label>
-                <input type="text" name="pswd" placeholder="Password">
+                <!-- <input type="text" name="pswd" placeholder="Password"> -->
+                <input type ="password" id="pswdngo" placeholder="Password">
+                <br>
+                <input type="checkbox" onclick="showNgoPswd()">Show Password
                 <br>
                 <button>Login NGO</button>
             </form>
@@ -76,6 +84,33 @@ require_once '../../includes/login_view.inc.php';
 
     Don't have an account? 
     <a href="../p_register/register.php"> Register now.</a>
+
+
+
+
+    <!-- show/hide password field -->
+<script>
+function showVolPswd() {
+    var x = document.getElementById("pswdvol");
+
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+
+
+function showNgoPswd() {
+    var y = document.getElementById("pswdngo");
+
+    if (y.type === "password") {
+        y.type = "text";
+    } else {
+        y.type = "password";
+    }
+}
+</script>
 
 </body>
 </html>

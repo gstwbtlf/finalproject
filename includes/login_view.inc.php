@@ -12,7 +12,7 @@ function output_username() {
 }
 
 
-
+//check for errors when logging in 
 function check_login_errors() {
 
     if (isset($_SESSION['errors_login'])) {
@@ -30,3 +30,5 @@ function check_login_errors() {
         echo '<p>Login sucessful!</p>';
     }
 }
+
+
