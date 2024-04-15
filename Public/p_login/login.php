@@ -1,3 +1,9 @@
+<?php
+require_once '../../includes/config_session.inc.php';
+require_once '../../includes/login_view.inc.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,27 +26,51 @@
 
     <br>
 
-    <form action="../../includes/login.inc.php" method="post">
-        <label for="username">Username</label>
-        <input type="text" name="username" placeholder="Username">
-        <br>
-        <label for="pswd">Password</label>
-        <input type="text" name="pswd" placeholder="Password">
-        <br>
-        <button>Login</button>
-    </form>
-
+    <h3>     
+        <?php
+        output_username();
+        ?>
+    </h3>
+    
     <br>
 
-    <a href="../../Private/p_volunteer/volunteer.php"> 
-        <button method="post">Volunteer List</button>
-    </a>
+    <?php
+        if (!isset($_SESSION["user_id"])) { ?>
+            <h3> Volunteer Login</h3>
+            <form action="../../includes/loginvol.inc.php" method="post">
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="Username">
+                <br>
+                <label for="pswd">Password</label>
+                <input type="text" name="pswd" placeholder="Password">
+                <br>
+                <button>Login Volunteer</button>
+            </form>
 
-    <br>
 
-    <a href="../../Private/p_ngo/ngo.php"> 
-        <button method="post">NGO List</button>
-    </a>
+            <h3> NGO Login</h3>
+            <form action="../../includes/loginngo.inc.php" method="post">
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="Username">
+                <br>
+                <label for="pswd">Password</label>
+                <input type="text" name="pswd" placeholder="Password">
+                <br>
+                <button>Login NGO</button>
+            </form>
+
+
+
+
+
+        <?php } 
+    ?>
+
+
+
+    <?php
+    check_login_errors();
+    ?>
 
     <br>
 

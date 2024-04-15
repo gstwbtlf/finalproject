@@ -1,3 +1,9 @@
+<?php
+require_once '../../includes/config_session.inc.php';
+require_once '../../includes/login_view.inc.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +13,23 @@
     <link rel="stylesheet" href="Private/p_volpanel/volpanel.css">
 </head>
 <body>
+
+    <h3>     
+        <?php
+        output_username();
+        ?>
+    </h3>
+
     <?php 
         echo "Volunteer Panel Page";
     ?>    
+
+<h3> Logout</h3>
+    <br>
+    <form action="../../includes/logout.inc.php" method="post">
+        <br>
+        <button>Logout</button>
+    </form>
+
 </body>
 </html>
