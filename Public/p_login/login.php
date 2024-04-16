@@ -44,10 +44,10 @@ require_once '../../includes/login_view.inc.php';
                 <input type="text" name="username" placeholder="Username">
                 <br>
                 <label for="pswd">Password</label>
-                <!-- <input type="text" name="pswd" placeholder="Password"> -->
-                <input type ="password" id="pswdvol" placeholder="Password">
+                <input type="text" name="pswd" placeholder="Password"> 
+                <!-- <input type ="password" id="pswdvol" placeholder="Password">
                 <br>
-                <input type="checkbox" onclick="showVolPswd()">Show Password
+                <input type="checkbox" onclick="showVolPswd()">Show Password-->
                 <br>
                 <button>Login Volunteer</button>
             </form>
@@ -59,10 +59,10 @@ require_once '../../includes/login_view.inc.php';
                 <input type="text" name="username" placeholder="Username">
                 <br>
                 <label for="pswd">Password</label>
-                <!-- <input type="text" name="pswd" placeholder="Password"> -->
-                <input type ="password" id="pswdngo" placeholder="Password">
+                <input type="text" name="pswd" placeholder="Password"> 
+                <!-- <input type ="password" id="pswdngo" placeholder="Password">
                 <br>
-                <input type="checkbox" onclick="showNgoPswd()">Show Password
+                <input type="checkbox" onclick="showNgoPswd()">Show Password -->
                 <br>
                 <button>Login NGO</button>
             </form>
@@ -88,7 +88,7 @@ require_once '../../includes/login_view.inc.php';
 
 
 
-    <!-- show/hide password field -->
+    <!-- show/hide password field 
 <script>
 function showVolPswd() {
     var x = document.getElementById("pswdvol");
@@ -111,6 +111,6 @@ function showNgoPswd() {
     }
 }
 </script>
-
+-->
 </body>
 </html>
