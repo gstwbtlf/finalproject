@@ -38,6 +38,19 @@ require_once '../../includes/dbh.inc.php';
     </form>
 
     <br>
+
+
+    
+    <h3> Delete Account</h3>
+    <?php
+        echo "WARNING! Deleting your account is permanent and all your user information will be deleted.";
+        echo "<br>";
+        echo "Upon sucessful deletion of your account, you will be logged out and sent back to the Login page.";
+    ?>
+    
+    <form action="../../includes/delete_voluser.inc.php" method="post">
+        <button>Delete</button>
+    </form>
    
 </body>
 </html>
