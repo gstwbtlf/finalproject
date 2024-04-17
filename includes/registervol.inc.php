@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         if ($errors) {
             $_SESSION["errorsvol_register"] = $errors;
 
-            header("Location: ../Public/p_register_vol/registervol.php");
+            header("Location: ../Private/p_register_user/registervol.php");
             die();
         }
 
@@ -61,8 +61,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         //sign user into site when no errors present
         createvol_user($pdo, $username, $firstname, $lastname, $pswd, $email, $phonenumber, $website, $availability, $weekhours, $backgroundcheck, $education, $areasofinterest);
 
-        header ("Location: ../Public/p_register_vol/registervol.php?register=success");
-
+        header ("Location: ../Private/p_register_user/registervol.php?register=success");
+   
         $pdo = null;
         $stmt = null;
 

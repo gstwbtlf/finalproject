@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Public/p_register/register.css">
+    <link rel="stylesheet" href="register.css">
 </head>
 <body>
 
@@ -19,16 +19,19 @@
         <button>Home</button>
     </a>
    
+
     <br>
-    <a href="../../Public/p_register_vol/registervol.php"> 
+    <form action="../../Private/p_register_user/registervol.php" method="post">
+    <!-- <a href="../../Private/p_register_user/registervol.php">  -->
         <button>Register Volunteer</button>
-    </a>
+    <!-- </a> -->
+</form>
     
     <br>
-   
-    <a href="../../Public/p_register_ngo/registerngo.php"> 
+    <form action="../../Private/p_register_user/registerngo.php" method="post">
+    <!-- <a href="../../Private/p_register_user/registerngo.php"> -->
         <button>Register NGO</button>
-    </a>
-
+    <!-- </a>-->
+</form>
 </body>
 </html>

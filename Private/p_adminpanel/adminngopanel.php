@@ -1,4 +1,5 @@
 <?php
+
 require_once '../../includes/config_session.inc.php';
 require_once '../../includes/login_view.inc.php';
 require_once '../../includes/dbh.inc.php';
@@ -11,7 +12,7 @@ require_once '../../includes/dbh.inc.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Private/p_adminpanel/adminpanel.css">
+    <link rel="stylesheet" href="adminpanel.css">
 </head>
 <body>
 

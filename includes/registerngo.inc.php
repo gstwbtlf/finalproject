@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         if ($errors) {
             $_SESSION["errorsngo_register"] = $errors;
 
-            header("Location: ../Public/p_register_ngo/registerngo.php");
+            header("Location: ../Private/p_register_user/registerngo.php");
             die();
         }
 
@@ -59,8 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         //sign user into site when no errors present
         createngo_user($pdo, $username, $firstname, $lastname, $pswd, $email, $phonenumber, $website, $organizationname, $ngoneeds, $missionstmt);
 
-        header ("Location: ../Public/p_register_ngo/registerngo.php?register=success");
-
+        header ("Location: ../Private/p_register_user/registerngo.php?register=success");
+ 
         $pdo = null;
         $stmt = null;
     

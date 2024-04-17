@@ -52,21 +52,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $_SESSION["user_id"] = $result["id"];
         $_SESSION["user_name"] = htmlspecialchars($result["username"]);
-
-        //new stuff here
         $_SESSION["user_type"] = $result["usertype"];
-        //end new stuff
 
         // reset session regeneration time
         $_SESSION['last_regeneration'] = time();
 
-       //header("Location: ../Private/p_volpanel/volpanel.php?login=success");
-
-       //new stuff here
+       //check for usertype, route pages accordingly
        if ($result["usertype"] === "adm") {
             header("Location: ../Private/p_adminpanel/adminvolpanel.php?login=success");
         } else {
-            header("Location: ../Private/p_volpanel/volpanel.php?login=success");
+            header("Location: ../Private/p_userpanel/volpanel.php?login=success");
         }
         //end new stuff
              

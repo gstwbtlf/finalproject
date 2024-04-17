@@ -1,4 +1,7 @@
 <?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
 require_once '../../includes/config_session.inc.php';
 require_once '../../includes/login_view.inc.php';
 require_once '../../includes/dbh.inc.php';
@@ -10,7 +13,7 @@ require_once '../../includes/dbh.inc.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Private/p_volunteer/volunteer.css">
+    <link rel="stylesheet" href="usertables.css">
 </head>
 <body>
 
@@ -26,7 +29,7 @@ require_once '../../includes/dbh.inc.php';
         echo "Volunteer List Page";
     ?>   
     
-    <form action="../p_volpanel/volpanel.php" method="post">
+    <form action="../p_userpanel/volpanel.php" method="post">
         <button>Volunteer Profile</button>
     </form> 
 
@@ -74,6 +77,11 @@ require_once '../../includes/dbh.inc.php';
         $pdo = null;
         $stmt = null;
         die();
+
+    } else{
+        header("Location: ../p_forbidden/forbidden.php");
+        die();
+    }
     ?>
 
 </body>

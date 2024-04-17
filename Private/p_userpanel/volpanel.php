@@ -11,34 +11,33 @@ require_once '../../includes/dbh.inc.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Private/p_ngopanel/ngopanel.css">
+    <link rel="stylesheet" href="userpanel.css">
 </head>
 <body>
 
 
     <h3>     
         <?php
-            output_username();
+        output_username();
         ?>
     </h3>
 
-
     <?php 
-        echo "NGO Panel Page";
-    ?>   
+        echo "Volunteer Panel Page";
+    ?>    
 
-    <form action="../p_ngo/ngo.php" method="post">
-        <button>Volunteer List</button>
+
+    <form action="../p_usertables/volunteer.php" method="post">
+        <button>NGO List</button>
     </form>
 
-
     <h3> Logout</h3>
-
+    
     <form action="../../includes/logout.inc.php" method="post">
         <button>Logout</button>
     </form>
 
     <br>
-
+   
 </body>
 </html>

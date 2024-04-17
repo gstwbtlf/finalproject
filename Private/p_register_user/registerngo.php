@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Private/p_register_ngo/registerngo.css">
+    <link rel="stylesheet" href="registeruser.css">
 </head>
 <body>
     <?php 

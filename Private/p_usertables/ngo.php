@@ -1,4 +1,7 @@
 <?php
+
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+
 require_once '../../includes/config_session.inc.php';
 require_once '../../includes/login_view.inc.php';
 require_once '../../includes/dbh.inc.php';
@@ -10,7 +13,7 @@ require_once '../../includes/dbh.inc.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Private/p_ngo/ngo.css">
+    <link rel="stylesheet" href="usertables.css">
 </head>
 <body>
 
@@ -26,7 +29,7 @@ require_once '../../includes/dbh.inc.php';
         echo "NGO List Page";
     ?>  
     
-    <form action="../p_ngopanel/ngopanel.php" method="post">
+    <form action="../p_userpanel/ngopanel.php" method="post">
         <button>NGO Profile</button>
     </form>
     
@@ -73,6 +76,11 @@ require_once '../../includes/dbh.inc.php';
 
         $pdo = null;
         echo "</table>";
+
+    } else{
+        header("Location: ../p_forbidden/forbidden.php");
+        die();
+    }
     ?>
 
 </body>

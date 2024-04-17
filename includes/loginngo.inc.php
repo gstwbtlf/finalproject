@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         if ($result["usertype"] === "adm") {
             header("Location: ../Private/p_adminpanel/adminngopanel.php?login=success");
         } else {
-            header("Location: ../Private/p_ngopanel/ngopanel.php?login=success");
+            header("Location: ../Private/p_userpanel/ngopanel.php?login=success");
         }
     //end new stuff
 

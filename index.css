@@ -50,10 +50,10 @@ body {
     word-spacing: normal;
 }
 
-button{
+button {
     background-color: blueviolet;
     color: white;
-    border-radius: 9px;
+    border-radius: 90px;
     height: 50px;
     width: 200px;
     font-size: 18px;

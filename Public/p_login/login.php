@@ -10,7 +10,7 @@ require_once '../../includes/login_view.inc.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Public/p_login/login.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
@@ -25,6 +25,14 @@ require_once '../../includes/login_view.inc.php';
      <a href="../.."> 
         <button>Home</button>
     </a>
+
+    <br>
+
+<h3> Logout</h3>
+
+<form action="../../includes/logout.inc.php" method="post">
+    <button>Logout</button>
+</form>
 
     <br>
 
@@ -66,6 +74,8 @@ require_once '../../includes/login_view.inc.php';
                 <br>
                 <button>Login NGO</button>
             </form>
+
+
 
 
 
