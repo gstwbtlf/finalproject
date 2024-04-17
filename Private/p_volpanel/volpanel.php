@@ -38,48 +38,6 @@ require_once '../../includes/dbh.inc.php';
     </form>
 
     <br>
-
-    
-    <?php
-    /*
-        //NGO Table listing
-        echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>Firstname</th><th>Lastname</th><th>Organization Name</th><th>Phone Number</th><th>Email</th><th>Mission Statement</th><th>Org Needs</th><th>Website</th></tr>";
-
-        class TableRows extends RecursiveIteratorIterator {
-            function __construct($it) {
-                parent::__construct($it, self::LEAVES_ONLY);
-            }
-
-            function current() {
-                return "<td style='width: 150px; border: 1px solid black;'>" . parent::current(). "</td>";
-            }
-
-            function beginChildren() {
-                echo "<tr>";
-            }
-
-            function endChildren() {
-                echo "</tr>" . "\n";
-            }
-        } 
-
-        $stmt = $pdo->prepare("SELECT firstname, lastname, orgname, phonenum, email, missionstmt, ngoneeds, website FROM glngousers");
-        $stmt->execute();
-        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
-        foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
-            echo $v;
-        }
-
-        echo "</table>";
-        $pdo = null;
-        $stmt = null;
-        die();
-        */
-    ?>
-
-
-
+   
 </body>
 </html>

@@ -52,10 +52,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $_SESSION["user_id"] = $result["id"];
         $_SESSION["user_name"] = htmlspecialchars($result["username"]);
+        $_SESSION["user_type"] = $result["usertype"];
+
         // reset session regeneration time
         $_SESSION['last_regeneration'] = time();
+        
+        //check usertype, route pages accordingly
+        if ($result["usertype"] === "adm") {
+            header("Location: ../Private/p_adminpanel/adminngopanel.php?login=success");
+        } else {
+            header("Location: ../Private/p_ngopanel/ngopanel.php?login=success");
+        }
+    //end new stuff
 
-        header("Location: ../Private/p_ngopanel/ngopanel.php?login=success");
         //close connections
         $pdo = null;
         $stmt = null;
