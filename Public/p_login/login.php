@@ -88,12 +88,18 @@ require_once '../../includes/login_view.inc.php';
 
     <?php
     check_login_errors();
+    
+
+    echo "<br>";
+
+    echo "Don't have an account?"
     ?>
+    <a href="../p_register/register.php">Register now.</a>
 
-    <br>
-
-    Don't have an account? 
-    <a href="../p_register/register.php"> Register now.</a>
+    <?php
+    echo "<br>";
+    ?>
+    <a href="../../Private/p_forgotpswd/forgotpswd.php">Forgot password.</a>
 
 
 
