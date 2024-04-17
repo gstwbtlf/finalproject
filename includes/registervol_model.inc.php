@@ -27,8 +27,12 @@ function getvol_email(object $pdo, string $email) {
 
 
 function setvol_user(object $pdo, string $username, string $firstname, string $lastname, string $pswd, string $email, string $phonenum, string $website, string $availability, string $weekhours, string $backgroundcheck, string $education, string $areasofinterest) {
-    $query = "INSERT INTO glvolusers (username, firstname, lastname, pswd, email, phonenum, website, availnow, volhours, backcheck, education, areainterest) VALUES (:username, :firstname, :lastname, :pswd, :email, :phonenum, :website, :availnow, :volhours, :backcheck, :education, :areainterest);";
     
+    //set user type to 'usr' automatically upon registration
+    $usertype = "usr";
+    
+    $query = "INSERT INTO glvolusers (usertype, username, firstname, lastname, pswd, email, phonenum, website, availnow, volhours, backcheck, education, areainterest) VALUES (:usertype, :username, :firstname, :lastname, :pswd, :email, :phonenum, :website, :availnow, :volhours, :backcheck, :education, :areainterest);";
+
     $stmt = $pdo->prepare($query);
    
     //hash password
@@ -38,6 +42,7 @@ function setvol_user(object $pdo, string $username, string $firstname, string $l
 
     $hashedPswd = password_hash($pswd, PASSWORD_BCRYPT, $options);
 
+    $stmt->bindParam(":usertype", $usertype);
     $stmt->bindParam(":username", $username);    
     $stmt->bindParam(":firstname", $firstname);    
     $stmt->bindParam(":lastname", $lastname);    
