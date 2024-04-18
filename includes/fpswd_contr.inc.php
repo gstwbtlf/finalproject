@@ -12,7 +12,7 @@ function input_empty (string $username, string $email) {
     }
 }
 
-
+/*
 // is the user in the database already?
 function username_wrong(bool|array $result) {
 
@@ -35,3 +35,4 @@ function email_wrong(bool|array $result) {
     }
     
 }
+*/

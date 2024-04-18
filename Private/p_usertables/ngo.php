@@ -66,7 +66,7 @@ require_once '../../includes/dbh.inc.php';
             }
         } 
 
-        $stmt = $pdo->prepare("SELECT firstname, lastname, phonenum, email, education, areainterest, volhours, backcheck, availnow, website FROM glvolusers");
+        $stmt = $pdo->prepare("SELECT firstname, lastname, phonenum, email, education, areainterest, volhours, backcheck, availnow, website FROM glvolusers WHERE usertype='usr'");
         $stmt->execute();
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 

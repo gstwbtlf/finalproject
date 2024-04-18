@@ -43,6 +43,7 @@ require_once '../../includes/dbh.inc.php';
 
     
     <?php
+
         //NGO Table listing
         echo "<table style='border: solid 1px black;'>";
         echo "<tr><th>Firstname</th><th>Lastname</th><th>Organization Name</th><th>Phone Number</th><th>Email</th><th>Mission Statement</th><th>Org Needs</th><th>Website</th></tr>";
@@ -65,7 +66,7 @@ require_once '../../includes/dbh.inc.php';
             }
         } 
 
-        $stmt = $pdo->prepare("SELECT firstname, lastname, orgname, phonenum, email, missionstmt, ngoneeds, website FROM glngousers");
+        $stmt = $pdo->prepare("SELECT firstname, lastname, orgname, phonenum, email, missionstmt, ngoneeds, website FROM glngousers WHERE usertype='usr'");
         $stmt->execute();
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
