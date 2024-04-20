@@ -23,7 +23,25 @@
 
 
     <?php 
-        echo "NGO Panel Page";
+        echo "NGO Panel Page<br>";
+
+
+        //ngo id
+        $ngouser_id = $_SESSION["user_id"];
+
+        //user details
+        $queryngouser = "SELECT username, firstname, lastname, orgname, phonenum, email FROM glngousers WHERE id = :id;";
+        $stmtngouser = $pdo->prepare($queryngouser);
+        $stmtngouser->bindParam(":id", $ngouser_id);
+        $stmtngouser->execute();
+        $resultngouser = $stmtngouser->fetch(PDO::FETCH_ASSOC);
+
+        echo "Username: " . $resultngouser["username"] . "<br>";
+        echo "First Name: " . $resultngouser["firstname"] . "<br>";
+        echo "Last Name: " . $resultngouser["lastname"] . "<br>";
+        echo "Organization Name: " . $resultngouser["orgname"] . "<br>";
+        echo "Phone Number: " . $resultngouser["phonenum"] . "<br>";
+        echo "Email: " . $resultngouser["email"] . "<br>";
     ?>   
 
     <form action="../p_usertables/ngo.php" method="post">

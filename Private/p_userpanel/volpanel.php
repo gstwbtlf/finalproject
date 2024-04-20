@@ -22,7 +22,24 @@
     </h3>
 
     <?php 
-        echo "Volunteer Panel Page";
+        echo "Volunteer Panel Page<br>";
+
+        
+        //volunteer id
+        $voluser_id = $_SESSION["user_id"];
+        
+        //user details
+        $queryvoluser = "SELECT username, firstname, lastname, phonenum, email FROM glvolusers WHERE id = :id;";
+        $stmtvoluser = $pdo->prepare($queryvoluser);
+        $stmtvoluser->bindParam(":id", $voluser_id);
+        $stmtvoluser->execute();
+        $resultvoluser = $stmtvoluser->fetch(PDO::FETCH_ASSOC);
+
+        echo "Username: " . $resultvoluser["username"] . "<br>";
+        echo "First Name: " . $resultvoluser["firstname"] . "<br>";
+        echo "Last Name: " . $resultvoluser["lastname"] . "<br>";
+        echo "Phone Number: " . $resultvoluser["phonenum"] . "<br>";
+        echo "Email: " . $resultvoluser["email"] . "<br>";
     ?>    
 
 

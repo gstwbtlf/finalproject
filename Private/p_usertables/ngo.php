@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
+//if ($_SERVER["REQUEST_METHOD"] == "POST"){
     require_once '../../includes/config_session.inc.php';
     require_once '../../includes/login_view.inc.php';
     require_once '../../includes/dbh.inc.php';
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     <?php
     //Volunteer Table listing
         echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>Firstname</th><th>Lastname</th><th>Phone Number</th><th>Email</th><th>Education</th><th>Area of Interest</th><th>Volunteer Hours</th><th>Background Check</th><th>Availability</th><th>Website</th></tr>";
+        echo "<tr><th>ID #</th><th>Firstname</th><th>Lastname</th><th>Phone Number</th><th>Email</th><th>Education</th><th>Area of Interest</th><th>Volunteer Hours</th><th>Background Check</th><th>Availability</th><th>Website</th></tr>";
 
         class TableRows extends RecursiveIteratorIterator {
             function __construct($it) {
@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             }
         } 
 
-        $stmt = $pdo->prepare("SELECT firstname, lastname, phonenum, email, education, areainterest, volhours, backcheck, availnow, website FROM glvolusers WHERE usertype='usr'");
+        $stmt = $pdo->prepare("SELECT id, firstname, lastname, phonenum, email, education, areainterest, volhours, backcheck, availnow, website FROM glvolusers WHERE usertype='usr'");
         $stmt->execute();
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -71,11 +71,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $pdo = null;
         echo "</table>";
+    ?>
 
+        <form action="../../includes/contactvol_user.inc.php" method="post">
+        <label for="voluser_id">Volunter ID to Contact</label>
+        <input id="voluser_id" type="text" name="voluser_id" placeholder="Volunteer ID to Contact">
+        <button>Contact NGO</button>
+        </form> 
+    <?php
+        /*
 } else{
     header("Location: ../p_forbidden/forbidden.php");
     die();
 }
+        */
     ?>
 
 </body>

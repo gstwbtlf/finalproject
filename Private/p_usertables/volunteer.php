@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
+//if ($_SERVER["REQUEST_METHOD"] == "POST"){
     require_once '../../includes/config_session.inc.php';
     require_once '../../includes/login_view.inc.php';
     require_once '../../includes/dbh.inc.php';
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     <?php
         //NGO Table listing
         echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>Firstname</th><th>Lastname</th><th>Organization Name</th><th>Phone Number</th><th>Email</th><th>Mission Statement</th><th>Org Needs</th><th>Website</th></tr>";
+        echo "<tr><th>ID #</th><th>Firstname</th><th>Lastname</th><th>Organization Name</th><th>Phone Number</th><th>Email</th><th>Mission Statement</th><th>Org Needs</th><th>Website</th></tr>";
 
         class TableRows extends RecursiveIteratorIterator {
             function __construct($it) {
@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             }
         } 
 
-        $stmt = $pdo->prepare("SELECT firstname, lastname, orgname, phonenum, email, missionstmt, ngoneeds, website FROM glngousers WHERE usertype='usr'");
+        $stmt = $pdo->prepare("SELECT id, firstname, lastname, orgname, phonenum, email, missionstmt, ngoneeds, website FROM glngousers WHERE usertype='usr'");
         $stmt->execute();
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -70,14 +70,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         }
 
         echo "</table>";
+        ?>
+
+
+        <form action="../../includes/contactngo_user.inc.php" method="post">
+            <label for="ngouser_id">NGO ID to Contact</label>
+            <input id="ngouser_id" type="text" name="ngouser_id" placeholder="NGO ID to Contact">
+            <button>Contact NGO</button>
+        </form> 
+
+
+        <?php
         $pdo = null;
         $stmt = null;
         die();
 
+        /*
 } else{
     header("Location: ../p_forbidden/forbidden.php");
     die();
 }
+*/
     ?>
 
 </body>
