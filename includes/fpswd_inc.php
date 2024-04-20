@@ -47,31 +47,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             die();
         }
 
-    //$to = "admin@website.com";
-    $to = " ";
-    $subject = "Forgot My Password";
+        //$to = "admin@website.com";
+        $to = " ";
+        $subject = "Forgot My Password";
     
-    $txt = "Hello Administrator!" . "<br><br>" . 
-        "I have forgotten my password. Please reset it for me. My information is as follows:" . 
-        "Username: " . $username . "<br>" . 
-        "Email: " . $email . "<br><b>" .
-        "Thank you!" . "<br><b>" .
-        $username;
+        $txt = "Hello Administrator!" . "<br><br>" . 
+            "I have forgotten my password. Please reset it for me. My information is as follows:" . 
+            "Username: " . $username . "<br>" . 
+            "Email: " . $email . "<br><b>" .
+            "Thank you!" . "<br><b>" .
+            $username;
     
         $headers = "From:" . $email . "\r\n";
     
-    if (mail($to,$subject,$txt,$headers)){
-        echo "Email sent successfully!";
-    } else {
-        echo "Error sending email.";
-    }
+        if (mail($to,$subject,$txt,$headers)){
+            echo "Email sent successfully!";
+        } else {
+            echo "Error sending email.";
+        }
 
-    header("Location: ../Public/p_login/login.php");
-    die();
-} catch (PDOException $e) {
-    die("Query failed: " . $e->getMessage());
+        header("Location: ../Public/p_login/login.php");
+        die();
 
-} 
+    } catch (PDOException $e) {
+        die("Query failed: " . $e->getMessage());
+    } 
 
 } else {
     header("Location: ../Private/p_forbidden/forbidden.php");

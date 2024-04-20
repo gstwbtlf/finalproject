@@ -5,12 +5,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="registeruser.css">
 </head>
+
 <body>
     <?php 
         echo "NGO Register Page";
@@ -71,13 +73,13 @@
 
             <br>
         
-        <label for="missionstmt">Company Mission Statement</label>
-        <input id="missionstmt" type="text" name="missionstmt" placeholder="Company Mission Statement">
+            <label for="missionstmt">Company Mission Statement</label>
+            <input id="missionstmt" type="text" name="missionstmt" placeholder="Company Mission Statement">
 
             <br>
         
-        <label for="website">Company Website URL</label>
-        <input id="website" type="text" name="website" placeholder="Company Website URL">
+            <label for="website">Company Website URL</label>
+            <input id="website" type="text" name="website" placeholder="Company Website URL">
 
             <br>
 
@@ -86,7 +88,24 @@
 
         <?php
             checkngo_register_errors();
+
+            //output_username();
+
+            //if (session_status () === PHP_SESSION_ACTIVE){
+                //echo "session status active";
+
+                //grab user data
+                //$_SESSION["user_type"] = $result["usertype"];
+                //$result = get_user($pdo, $usertype);
+
+                //$_SESSION["user_type"] = $result["usertype"];
+                //echo $result["usertype"];
+                //echo "<br>here";
+
+            //}
         ?>
     </main>
+
 </body>
+
 </html>

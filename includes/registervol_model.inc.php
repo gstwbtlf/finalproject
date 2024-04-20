@@ -25,7 +25,6 @@ function getvol_email(object $pdo, string $email) {
 }
 
 
-
 function setvol_user(object $pdo, string $username, string $firstname, string $lastname, string $pswd, string $email, string $phonenum, string $website, string $availability, string $weekhours, string $backgroundcheck, string $education, string $areasofinterest) {
     
     //set user type to 'usr' automatically upon registration

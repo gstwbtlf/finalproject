@@ -63,7 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         } else {
             header("Location: ../Private/p_userpanel/ngopanel.php?login=success");
         }
-    //end new stuff
 
         //close connections
         $pdo = null;
@@ -73,7 +72,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
     }
-
 
 } else{
     header("Location: ../Private/p_forbidden/forbidden.php");

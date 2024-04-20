@@ -55,15 +55,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             die();
         }
 
-
         //sign user into site when no errors present
         createngo_user($pdo, $username, $firstname, $lastname, $pswd, $email, $phonenumber, $website, $organizationname, $ngoneeds, $missionstmt);
 
         header ("Location: ../Private/p_register_user/registerngo.php?register=success");
  
+        //close connections
         $pdo = null;
         $stmt = null;
-    
         die();
         
     } catch (PDOException $e) {

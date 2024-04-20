@@ -1,21 +1,20 @@
 <?php
-require_once '../../includes/config_session.inc.php';
-require_once '../../includes/login_view.inc.php';
+    require_once '../../includes/config_session.inc.php';
+    require_once '../../includes/login_view.inc.php';
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
-
-
-
     <?php 
         echo "Login Page";
     ?>
@@ -28,11 +27,10 @@ require_once '../../includes/login_view.inc.php';
 
     <br>
 
-<h3> Logout</h3>
-
-<form action="../../includes/logout.inc.php" method="post">
-    <button>Logout</button>
-</form>
+    <h3>Logout</h3>
+    <form action="../../includes/logout.inc.php" method="post">
+        <button>Logout</button>
+    </form>
 
     <br>
 
@@ -46,7 +44,7 @@ require_once '../../includes/login_view.inc.php';
 
     <?php
         if (!isset($_SESSION["user_id"])) { ?>
-            <h3> Volunteer Login</h3>
+            <h3>Volunteer Login</h3>
             <form action="../../includes/loginvol.inc.php" method="post">
                 <label for="username">Username</label>
                 <input type="text" name="username" placeholder="Username">
@@ -61,7 +59,7 @@ require_once '../../includes/login_view.inc.php';
             </form>
 
 
-            <h3> NGO Login</h3>
+            <h3>NGO Login</h3>
             <form action="../../includes/loginngo.inc.php" method="post">
                 <label for="username">Username</label>
                 <input type="text" name="username" placeholder="Username">
@@ -75,58 +73,49 @@ require_once '../../includes/login_view.inc.php';
                 <button>Login NGO</button>
             </form>
 
+    <?php 
+        } 
 
+        check_login_errors();
 
+        echo "<br>";
 
-
-
-
-        <?php } 
+        echo "Don't have an account?"
     ?>
 
-
-
-    <?php
-    check_login_errors();
-    
-
-    echo "<br>";
-
-    echo "Don't have an account?"
-    ?>
     <a href="../p_register/register.php">Register now.</a>
 
     <?php
-    echo "<br>";
+        echo "<br>";
     ?>
+
     <a href="../../Private/p_forgotpswd/forgotpswd.php">Forgot password.</a>
 
 
-
-
     <!-- show/hide password field 
-<script>
-function showVolPswd() {
-    var x = document.getElementById("pswdvol");
+    <script>
+    function showVolPswd() {
+        var x = document.getElementById("pswdvol");
 
-    if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
     }
-}
 
 
-function showNgoPswd() {
-    var y = document.getElementById("pswdngo");
+    function showNgoPswd() {
+        var y = document.getElementById("pswdngo");
 
-    if (y.type === "password") {
-        y.type = "text";
-    } else {
-        y.type = "password";
+        if (y.type === "password") {
+            y.type = "text";
+        } else {
+            y.type = "password";
+        }
     }
-}
-</script>
--->
+    </script>
+    -->
 </body>
+
 </html>

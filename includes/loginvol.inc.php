@@ -73,7 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         die("Query failed: " . $e->getMessage());
     }
 
-
 } else{
     header("Location: ../Private/p_forbidden/forbidden.php");
     die();

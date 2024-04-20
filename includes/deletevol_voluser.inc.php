@@ -20,11 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $stmt = null;
         die();
 
-
     } catch (PDOException $e) {
         die("Query failed (Delete user page): " . $e->getMessage());
     }
-
 
 } else {
     header("Location: ../Private/p_forbidden/forbidden.php");

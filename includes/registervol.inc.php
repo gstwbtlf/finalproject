@@ -63,11 +63,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         header ("Location: ../Private/p_register_user/registervol.php?register=success");
    
+        //close connections
         $pdo = null;
         $stmt = null;
-
         die();
-
         
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());

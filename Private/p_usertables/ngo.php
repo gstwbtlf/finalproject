@@ -1,29 +1,27 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
-
-require_once '../../includes/config_session.inc.php';
-require_once '../../includes/login_view.inc.php';
-require_once '../../includes/dbh.inc.php';
+    require_once '../../includes/config_session.inc.php';
+    require_once '../../includes/login_view.inc.php';
+    require_once '../../includes/dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="usertables.css">
 </head>
+
 <body>
-
-
     <h3>     
         <?php
             output_username();
         ?>
     </h3>
-
 
     <?php 
         echo "NGO List Page";
@@ -33,15 +31,12 @@ require_once '../../includes/dbh.inc.php';
         <button>NGO Profile</button>
     </form>
     
-
-    <h3> Logout</h3>
-
+    <h3>Logout</h3>
     <form action="../../includes/logout.inc.php" method="post">
         <button>Logout</button>
     </form>
 
     <br>
-
 
     <?php
     //Volunteer Table listing
@@ -77,11 +72,12 @@ require_once '../../includes/dbh.inc.php';
         $pdo = null;
         echo "</table>";
 
-    } else{
-        header("Location: ../p_forbidden/forbidden.php");
-        die();
-    }
+} else{
+    header("Location: ../p_forbidden/forbidden.php");
+    die();
+}
     ?>
 
 </body>
+
 </html>

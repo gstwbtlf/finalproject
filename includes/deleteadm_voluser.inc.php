@@ -10,23 +10,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         require_once 'dbh.inc.php';
 
         if($vol_id != 1){
-        $query = "DELETE FROM glvolusers WHERE id=$vol_id";
-        $pdo->exec($query);
+            $query = "DELETE FROM glvolusers WHERE id=$vol_id";
+            $pdo->exec($query);
 
-        header("Location: ../Private/p_adminpanel/adminngopanel.php");
+            header("Location: ../Private/p_adminpanel/adminngopanel.php");
 
-        //close connections
-        $pdo = null;
-        $stmt = null;
-        die();
-    } else{
-        header("Location: ../Private/p_adminpanel/adminngopanel.php");
-    }
+            //close connections
+            $pdo = null;
+            $stmt = null;
+            die();
+
+        } else{
+            header("Location: ../Private/p_adminpanel/adminngopanel.php");
+        }
 
     } catch (PDOException $e) {
         die("Query failed (Delete user page): " . $e->getMessage());
     }
-
 
 } else {
     header("Location: ../Private/p_forbidden/forbidden.php");

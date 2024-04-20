@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $pdo = null;
             $stmt = null;
             die();
+
         } else{
             header("Location: ../Private/p_adminpanel/adminngopanel.php");
         }
@@ -26,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     } catch (PDOException $e) {
         die("Query failed (Delete user page): " . $e->getMessage());
     }
-
 
 } else {
     header("Location: ../Private/p_forbidden/forbidden.php");

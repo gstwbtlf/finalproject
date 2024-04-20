@@ -28,7 +28,7 @@ function is_username_wrong(bool|array $result) {
 // is the user's password matching the one in the database?
 function is_password_wrong(string $pswd, string $hashedPswd) {
 
-    if (!password_verify($pswd, $hashedPswd)){
+    if (!password_verify($pswd, $hashedPswd)) {
         return true;
     } else {
         return false;
