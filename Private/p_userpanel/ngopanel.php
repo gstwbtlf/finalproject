@@ -47,7 +47,7 @@ require_once '../../includes/dbh.inc.php';
         echo "<br>";
         echo "Upon sucessful deletion of your account, you will be logged out and sent back to the Login page.";
     ?>
-    <form action="../../includes/delete_ngouser.inc.php" method="post">
+    <form action="../../includes/deletengo_ngouser.inc.php" method="post">
         <button>Delete</button>
     </form>
 

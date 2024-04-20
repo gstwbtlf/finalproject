@@ -42,7 +42,7 @@
         //NGO Table listing
         echo "NGO Users";
         echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>Firstname</th><th>Lastname</th><th>Organization Name</th><th>Phone Number</th><th>Email</th><th>Mission Statement</th><th>Org Needs</th><th>Website</th></tr>";
+        echo "<tr><th>ID #</th><th>Username</th><th>Firstname</th><th>Lastname</th><th>Organization Name</th><th>Phone Number</th><th>Email</th><th>Mission Statement</th><th>Org Needs</th><th>Website</th></tr>";
 
         class TableRowsNGO extends RecursiveIteratorIterator {
             function __construct($it) {
@@ -62,7 +62,7 @@
             }
         } 
 
-        $stmtNGO = $pdo->prepare("SELECT firstname, lastname, orgname, phonenum, email, missionstmt, ngoneeds, website FROM glngousers");
+        $stmtNGO = $pdo->prepare("SELECT id, username, firstname, lastname, orgname, phonenum, email, missionstmt, ngoneeds, website FROM glngousers");
         $stmtNGO->execute();
         $resultNGO = $stmtNGO->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -74,11 +74,20 @@
         $stmtNGO = null;
         
         echo "<br>";
+
+        ?>
+        <form action="../../includes/deleteadm_ngouser.inc.php" method="post">
+        <label for="deletengoadm">NGO ID to Delete</label>
+        <input id="deletengoadm" type="text" name="deletengoadm" placeholder="NGO ID to Delete">
+        <button>Delete NGO User</button>
+        </form>
+<?php
+
     
         //Volunteer Table listing
         echo "Volunteer Users";
         echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>Firstname</th><th>Lastname</th><th>Phone Number</th><th>Email</th><th>Education</th><th>Area of Interest</th><th>Volunteer Hours</th><th>Background Check</th><th>Availability</th><th>Website</th></tr>";
+        echo "<tr><th>ID #</th><th>Username</th><th>Firstname</th><th>Lastname</th><th>Phone Number</th><th>Email</th><th>Education</th><th>Area of Interest</th><th>Volunteer Hours</th><th>Background Check</th><th>Availability</th><th>Website</th></tr>";
 
         class TableRowsVOL extends RecursiveIteratorIterator {
             function __construct($it) {
@@ -98,7 +107,7 @@
             }
         } 
 
-        $stmtVOL = $pdo->prepare("SELECT firstname, lastname, phonenum, email, education, areainterest, volhours, backcheck, availnow, website FROM glvolusers");
+        $stmtVOL = $pdo->prepare("SELECT id, username, firstname, lastname, phonenum, email, education, areainterest, volhours, backcheck, availnow, website FROM glvolusers");
         $stmtVOL->execute();
         $resultVOL = $stmtVOL->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -109,6 +118,17 @@
         $pdo = null;        
         $stmtVOL = null;
         echo "</table>";
+
+        ?>
+        <br>
+        <form action="../../includes/deleteadm_voluser.inc.php" method="post">
+            <label for="deletevoladm">NGO ID to Delete</label>
+            <input id="deletevoladm" type="text" name="deletevoladm" placeholder="Volunteer ID to Delete">
+            <button>Delete Volunteer User</button>
+        </form>
+        <br>
+
+        <?php
         die();
 /*
     } else{

@@ -58,12 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $_SESSION['last_regeneration'] = time();
 
        //check for usertype, route pages accordingly
-       if ($result["usertype"] === "adm") {
+       if ($result["usertype"] === "adm") { 
             header("Location: ../Private/p_adminpanel/adminvolpanel.php?login=success");
         } else {
             header("Location: ../Private/p_userpanel/volpanel.php?login=success");
         }
-        //end new stuff
              
         //close connections
         $pdo = null;

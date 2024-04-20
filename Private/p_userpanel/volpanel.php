@@ -48,7 +48,7 @@ require_once '../../includes/dbh.inc.php';
         echo "Upon sucessful deletion of your account, you will be logged out and sent back to the Login page.";
     ?>
     
-    <form action="../../includes/delete_voluser.inc.php" method="post">
+    <form action="../../includes/deletevol_voluser.inc.php" method="post">
         <button>Delete</button>
     </form>
    
