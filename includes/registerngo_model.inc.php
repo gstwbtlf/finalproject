@@ -29,8 +29,10 @@ function setngo_user(object $pdo, string $username, string $firstname, string $l
     
     //set user type to 'usr' automatically upon registration
     $usertype = "usr";
+    //set table type to NGO
+    $tbl = "ngo";
     
-    $query = "INSERT INTO glngousers (usertype, username, firstname, lastname, pswd, email, phonenum, website, orgname, ngoneeds, missionstmt) VALUES (:usertype, :username, :firstname, :lastname, :pswd, :email, :phonenum, :website, :orgname, :ngoneeds, :missionstmt);";
+    $query = "INSERT INTO glngousers (tbl, usertype, username, firstname, lastname, pswd, email, phonenum, website, orgname, ngoneeds, missionstmt) VALUES (:tbl, :usertype, :username, :firstname, :lastname, :pswd, :email, :phonenum, :website, :orgname, :ngoneeds, :missionstmt);";
 
     $stmt = $pdo->prepare($query);
    
@@ -41,6 +43,7 @@ function setngo_user(object $pdo, string $username, string $firstname, string $l
 
     $hashedPswd = password_hash($pswd, PASSWORD_BCRYPT, $options);
 
+    $stmt->bindParam(":tbl", $tbl); 
     $stmt->bindParam(":usertype", $usertype); 
     $stmt->bindParam(":username", $username);    
     $stmt->bindParam(":firstname", $firstname);    

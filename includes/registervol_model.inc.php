@@ -29,8 +29,10 @@ function setvol_user(object $pdo, string $username, string $firstname, string $l
     
     //set user type to 'usr' automatically upon registration
     $usertype = "usr";
+    //set table type to Volunteer
+    $tbl = "vol";
     
-    $query = "INSERT INTO glvolusers (usertype, username, firstname, lastname, pswd, email, phonenum, website, availnow, volhours, backcheck, education, areainterest) VALUES (:usertype, :username, :firstname, :lastname, :pswd, :email, :phonenum, :website, :availnow, :volhours, :backcheck, :education, :areainterest);";
+    $query = "INSERT INTO glvolusers (tbl, usertype, username, firstname, lastname, pswd, email, phonenum, website, availnow, volhours, backcheck, education, areainterest) VALUES (:tbl, :usertype, :username, :firstname, :lastname, :pswd, :email, :phonenum, :website, :availnow, :volhours, :backcheck, :education, :areainterest);";
 
     $stmt = $pdo->prepare($query);
    
@@ -41,6 +43,7 @@ function setvol_user(object $pdo, string $username, string $firstname, string $l
 
     $hashedPswd = password_hash($pswd, PASSWORD_BCRYPT, $options);
 
+    $stmt->bindParam(":tbl", $tbl);
     $stmt->bindParam(":usertype", $usertype);
     $stmt->bindParam(":username", $username);    
     $stmt->bindParam(":firstname", $firstname);    

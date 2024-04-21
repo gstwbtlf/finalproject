@@ -53,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $_SESSION["user_id"] = $result["id"];
         $_SESSION["user_name"] = htmlspecialchars($result["username"]);
         $_SESSION["user_type"] = $result["usertype"];
+        $_SESSION["tbl_type"] = $result["tbl"];
 
         // reset session regeneration time
         $_SESSION['last_regeneration'] = time();

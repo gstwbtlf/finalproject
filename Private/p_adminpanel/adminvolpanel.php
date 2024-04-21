@@ -37,6 +37,7 @@
     </form>
 
     <?php
+
         //NGO Table listing
         echo "NGO Users";
         echo "<table style='border: solid 1px black;'>";
@@ -75,14 +76,29 @@
     ?>
 
         <form action="../../includes/deleteadm_ngouser.inc.php" method="post">
-        <label for="deletengoadm">NGO ID to Delete</label>
-        <input id="deletengoadm" type="text" name="deletengoadm" placeholder="NGO ID to Delete">
-        <button>Delete NGO User</button>
+            <label for="deletengoadm">NGO ID to Delete</label>
+            <input id="deletengoadm" type="text" name="deletengoadm" placeholder="NGO ID to Delete">
+            <button>Delete NGO User</button>
+        </form>
+
+        <br>
+
+        <form action="../p_register_user/registerngo.php" method="post">
+            <label for="registerngoadm">Create New NGO User</label>
+            <button>Create New NGO User</button>
+        </form>
+    
+        <br>
+
+        <form action="" method="post">
+        <label for="editngoadm">Edit NGO User</label>
+            <button>Edit NGO User</button>
         </form>
 
         <br>
 
     <?php
+
         //Volunteer Table listing
         echo "Volunteer Users";
         echo "<table style='border: solid 1px black;'>";
@@ -126,6 +142,20 @@
             <label for="deletevoladm">NGO ID to Delete</label>
             <input id="deletevoladm" type="text" name="deletevoladm" placeholder="Volunteer ID to Delete">
             <button>Delete Volunteer User</button>
+        </form>
+
+        <br>
+        
+        <form action="../p_register_user/registervol.php" method="post">
+            <label for="registervoladm">Create New Volunteer User</label>
+            <button>Create New Volunteer User</button>
+        </form>
+    
+        <br>
+
+        <form action="" method="post">
+            <label for="editvoladm">Edit Volunteer User</label>
+            <button>Edit Volunteer User</button>
         </form>
 
         <br>

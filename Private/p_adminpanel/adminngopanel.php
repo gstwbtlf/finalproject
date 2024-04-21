@@ -90,10 +90,12 @@
         <br>
 
         <form action="" method="post">
+            <label for="editngoadm">Edit NGO User</label>
             <button>Edit NGO User</button>
         </form>
 
     <?php
+
         //Volunteer Table listing
         echo "Volunteer Users";
         echo "<table style='border: solid 1px black;'>";
@@ -138,6 +140,20 @@
             <button>Delete Volunteer User</button>
         </form>
     
+        <br>
+
+        <form action="../p_register_user/registervol.php" method="post">
+            <label for="registervoladm">Create New Volunteer</label>
+            <button>Create New Volunteer User</button>
+        </form>
+    
+        <br>
+
+        <form action="" method="post">
+            <label for="editvoladm">Edit Volunteer User</label>
+            <button>Edit Volunteer User</button>
+        </form>
+
         <br>
 
     <?php

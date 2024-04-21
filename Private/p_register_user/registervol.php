@@ -1,6 +1,8 @@
 <?php
     require_once '../../includes/config_session.inc.php';
     require_once '../../includes/registervol_view.inc.php';
+    require_once '../../includes/login_view.inc.php';
+    require_once '../../includes/dbh.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,13 +18,59 @@
 <body>
     <?php 
         echo "Volunteer Register Page";
+
+        echo "<br>";
+
+        if (isset($_SESSION["user_id"])) {
+            //usertype
+            $usertype = $_SESSION["user_type"];
+            //table type
+            $tbltype = $_SESSION["tbl_type"];
+
+            if ($usertype == "adm"){
+                if($tbltype == "vol"){
+    ?>
+                <form action="../p_adminpanel/adminvolpanel.php" method="post">
+                    <label for="adminvolpanel">Admin Panel</label>
+                    <button>Admin Volunteer Panel</button>
+                </form>
+    <?php
+            } elseif ($tbltype == "ngo"){
+    ?>
+                <form action="../p_adminpanel/adminngopanel.php" method="post">
+                    <label for="adminngopanel">Admin NGO Panel</label>
+                    <button>Admin Panel</button>
+                </form>
+    <?php
+            }
+    ?>
+
+            <br>
+
+            <form action="../../includes/logout.inc.php" method="post">
+                <label for="logoutadmpanel">Logout Admin Panel</label>
+                <button>Logout</button>
+            </form>
+
+            <br>
+
+    <?php
+        }
+
+
+        } else {
+            echo "Nothing to see here :P";
     ?>   
 
-    <br>
+            <br>
+        
+            <a href="../.."> 
+                <button>Home</button>
+            </a>
 
-    <a href="../.."> 
-        <button>Home</button>
-    </a>
+    <?php
+        }
+    ?> 
 
     <br>
 

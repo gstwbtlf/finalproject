@@ -41,7 +41,8 @@
         echo "Phone Number: " . $resultvoluser["phonenum"] . "<br>";
         echo "Email: " . $resultvoluser["email"] . "<br>";
     ?>    
-
+    
+    <br>
 
     <form action="../p_usertables/volunteer.php" method="post">
         <button>NGO List</button>

@@ -8,6 +8,8 @@ function output_username() {
         echo "You are logged in as " . $_SESSION["user_name"];
         echo "<br>";
         echo "You user id is: " . $_SESSION["user_id"];
+        echo "<br>";
+        echo "You user type is: " . $_SESSION["user_type"];
     } else {
         echo "You are not logged in.";
     }
