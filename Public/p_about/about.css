@@ -1,40 +1,9 @@
-html {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
-    font-weight: 100;
-    font-style: normal;
-    text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
-}
-
-head {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
-    font-weight: 100;
-    font-style: normal;
-    text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
-}
-
 h1 {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
+    font-size: 20px;
     font-weight: 100;
-    font-style: normal;
     text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
 }
 
 body {
@@ -42,10 +11,81 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: 100;
-    font-style: normal;
     text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
+}
+
+a {
+    cursor: pointer;
+}
+
+/* CLASSES */
+
+.header-about {
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-about-logo {
+    height: fit-content;
+    width: fit-content;
+    padding-left: 10px;
+    display: flex;
+}
+
+.header-about-logo img {
+    align-self: center;
+}
+
+.header-about-left-nav {
+    justify-content: left;
+    width: fit-content;
+    height: 70px;
+    display: flex;
+}
+
+.header-about-left-nav ul {
+    list-style: none;
+    margin-left: 3px;
+    align-self: center;
+}
+
+.header-about-left-nav ul li {
+    display: inline;
+    float: left;
+}
+
+.header-about-left-nav ul li a {
+    padding: 0 10px 0 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.header-about-right-nav {
+    justify-content: center;
+    height: 70px;
+    width: fit-content;
+    display: flex;
+    align-content: flex-end;
+}
+
+.header-about-right-nav ul {
+    list-style: none;
+    margin-left: 3px;
+    align-self: center;
+}
+
+.header-about-right-nav ul li {
+    display: inline;
+    float: left;
+}
+
+.header-about-right-nav ul li a {
+    padding: 0 10px 0 1px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }

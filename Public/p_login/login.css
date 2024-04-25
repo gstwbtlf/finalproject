@@ -1,29 +1,3 @@
-html {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
-    font-weight: 100;
-    font-style: normal;
-    text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
-}
-
-head {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
-    font-weight: 100;
-    font-style: normal;
-    text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
-}
-
 h1 {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
@@ -31,10 +5,6 @@ h1 {
     font-weight: 100;
     font-style: normal;
     text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
 }
 
 body {
@@ -44,8 +14,111 @@ body {
     font-weight: 100;
     font-style: normal;
     text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+/* CLASSES */
+
+.header-login {
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-login-logo {
+    height: fit-content;
+    width: fit-content;
+    padding-left: 10px;
+    display: flex;
+}
+
+.header-login-logo img {
+    align-self: center;
+}
+
+.header-login-left-nav {
+    justify-content: left;
+    width: fit-content;
+    display: flex;
+}
+
+.header-login-left-nav ul {
+    list-style: none;
+    margin-left: 3px;
+}
+
+.header-login-left-nav ul li {
+    display: inline;
+    float: left;
+}
+
+.header-login-left-nav ul li a {
+    padding: 0 10px 0 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 30px;
+}
+
+.header-login-right-nav {
+    justify-content: center;
+    height: 70px;
+    width: fit-content;
+    display: flex;
+    align-content: flex-end;
+}
+
+.header-login-right-nav ul {
+    list-style: none;
+    margin-left: 3px;
+    align-self: center;
+}
+
+.header-login-right-nav ul li {
+    display: inline;
+    float: left;
+}
+
+.header-login-right-nav ul li a {
+    padding: 0 10px 0 1px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.log-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 50px;
+}
+
+.log-vol {
+    width: 275px;
+    align-content: center;
+}
+
+.log-ngo {
+    width: 275px;
+    align-content: center;
+}
+
+.log-line {
+    background-color: black;
+    width: 2px;
+    height: 250px;
+}
+
+.log-endlinks {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

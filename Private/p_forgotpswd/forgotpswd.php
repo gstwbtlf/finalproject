@@ -9,20 +9,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="forgotpswd.css">
 </head>
 
 <body>
     <?php 
-        echo "Forgot Password Page";
+        //echo "Forgot Password Page";
     ?>  
         
-    <br>
+        <header class="header-forgot">
+            <div class="header-forgot-logo">
+                <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
+                <nav class="header-forgot-left-nav">
+                    <ul>
+                        <li><a href="../..">Home</a></li>
+                    </ul>     
+                </nav>
+            </div>
 
-    <a href="../.."> 
-        <button>Home</button>
-    </a>
+            <nav class="header-forgot-right-nav">
+                <ul>
+                    <li><a href="../../Public/p_register/register.php">Register</a></li>
+                    <li><a href="../../Public/p_login/login.php">Login</a></li>
+                </ul>     
+            </nav>
+        </header>
 
     <form action="../../includes/fpswd_inc.php" method="post">
         <label for="username">Username</label>

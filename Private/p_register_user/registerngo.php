@@ -11,16 +11,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NGO Registration</title>
+    <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="registeruser.css">
 </head>
 
 <body>
     <?php 
-        echo "NGO Register Page";
-
-        echo "<br>";
-
         if (isset($_SESSION["user_id"])) {
         //usertype
         $usertype = $_SESSION["user_type"];
@@ -31,43 +28,106 @@
 
             if($tbltype == "vol"){
     ?>
+            <!--
                 <form action="../p_adminpanel/adminvolpanel.php" method="post">
                     <label for="adminvolpanel">Admin Panel</label>
                     <button>Admin Volunteer Panel</button>
                 </form>
+            -->
+
+                <header class="header-registeruser">
+                    <div class="header-registeruser-logo">
+                        <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
+                        <nav class="header-registeruser-left-nav">
+                            <ul>
+                            <li><form action="../p_adminpanel/adminvolpanel.php" method="post"><button>Admin Volunteer Panel</button></form></li>
+                            </ul>     
+                        </nav>
+                    </div>
+
+                    <nav class="header-registeruser-right-nav">
+                        <ul>
+                            <li><form action="../../includes/logout.inc.php" method="post"><button>Logout</button></form></li>
+                        </ul>     
+                    </nav>
+                </header>
     <?php
-                } elseif ($tbltype == "ngo"){
+            } elseif ($tbltype == "ngo"){
     ?>
-                    <form action="../p_adminpanel/adminngopanel.php" method="post">
-                        <label for="adminngopanel">Admin NGO Panel</label>
+            <!--
+                <form action="../p_adminpanel/adminngopanel.php" method="post">
+                    <label for="adminngopanel">Admin NGO Panel</label>
                     <button>Admin Panel</button>
-                    </form>
+                </form>
+            -->
+
+                <header class="header-registeruser">
+                    <div class="header-registeruser-logo">
+                        <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
+                        <nav class="header-registeruser-left-nav">
+                            <ul>
+                            <li><form action="../p_adminpanel/adminngopanel.php" method="post"><button>Admin Panel</button></form></li>
+                            </ul>     
+                        </nav>
+                    </div>
+
+                    <nav class="header-registeruser-right-nav">
+                        <ul>
+                            <li><form action="../../includes/logout.inc.php" method="post"><button>Logout</button></form></li>
+                        </ul>     
+                    </nav>
+                </header>
     <?php
-                }
+            }
     ?>
 
             <br>
 
+        <!--
             <form action="../../includes/logout.inc.php" method="post">
                 <label for="logoutadmpanel">Logout Admin Panel</label>
                 <button>Logout</button>
             </form>
+        -->
 
             <br>
     <?php
         }
-    } else {
-        echo "Nothing to see here :P";
-    ?>
 
+    } else {
+        //echo "Nothing to see here :P";
+    ?>
+    <!--
         <br>
 
         <a href="../.."> 
             <button>Home</button>
         </a>
+    -->
 
+        <header class="header-registeruser">
+            <div class="header-registeruser-logo">
+                <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
+                <nav class="header-registeruser-left-nav">
+                    <ul>
+                        <li><a href="../..">Home</a></li>
+                        <li><a href="../../Public/p_about/about.php">About</a></li>
+                    </ul>     
+                </nav>
+            </div>
+
+            <nav class="header-registeruser-right-nav">
+                <ul>
+                    <li><a href="../../Public/p_login/login.php">Login</a></li>
+                </ul>     
+            </nav>
+        </header>
     <?php
     }
+
+    echo "NGO Register Page";
+
+    echo "<br>";
     ?>   
  
     <br>  
@@ -95,7 +155,7 @@
             <br>
 
             <label for="email">Point of Contact Email?</label>
-            <input id="email" type="text" name="email" placeholder="Point of Contact Email">
+            <input id="email" type="email" name="email" placeholder="Point of Contact Email">
 
             <br>
 
@@ -132,9 +192,9 @@
             <button type="submit">Register</button>
         </form>
 
-        <?php
+    <?php
             checkngo_register_errors();
-        ?>
+    ?>
     </main>
 
 </body>

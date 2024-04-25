@@ -10,11 +10,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Portal</title>
+    <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="userpanel.css">
 </head>
 
 <body>
+
+    <header class="header-userpanel">
+        <div class="header-userpanel-logo">
+            <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
+        </div>
+
+        <nav class="header-userpanel-right-nav">
+            <ul>
+                <li><form action="../../includes/logout.inc.php" method="post"><button>Logout</button></form></li>
+            </ul>     
+        </nav>
+    </header>
+
+
     <h3>     
         <?php
             output_username();
@@ -22,7 +37,7 @@
     </h3>
 
     <?php 
-        echo "Volunteer Panel Page<br>";
+        //echo "Volunteer Panel Page<br>";
 
         
         //volunteer id
@@ -40,7 +55,7 @@
         echo "Last Name: " . $resultvoluser["lastname"] . "<br>";
         echo "Phone Number: " . $resultvoluser["phonenum"] . "<br>";
         echo "Email: " . $resultvoluser["email"] . "<br>";
-    ?>    
+    ?> 
     
     <br>
 
@@ -48,11 +63,12 @@
         <button>NGO List</button>
     </form>
 
+<!--
     <h3>Logout</h3>
     <form action="../../includes/logout.inc.php" method="post">
         <button>Logout</button>
     </form>
-
+-->
     <br>
     
     <h3> Delete Account</h3>

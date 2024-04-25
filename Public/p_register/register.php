@@ -4,37 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register with GuardianLink</title>
+    <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="register.css">
 </head>
 
 <body>
 
     <?php 
-        echo "Register Page";
-
+        //echo "Register Page";
     ?>
 
-    <br>
+    <header class="header-register">
+        <div class="header-register-logo">
+            <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
+            <nav class="header-register-left-nav">
+                <ul>
+                    <li><a href="../..">Home</a></li>
+                    <li><a href="../p_about/about.php">About</a></li>
+                </ul>     
+             </nav>
+        </div>
 
-    <a href="../.."> 
-        <button>Home</button>
-    </a>
+        <nav class="header-register-right-nav">
+            <ul>
+                <li><a href="../p_login/login.php">Login</a></li>
+            </ul>     
+        </nav>
+    </header>
 
     <br>
 
     <form action="../../Private/p_register_user/registervol.php" method="post">
-        <!-- <a href="../../Private/p_register_user/registervol.php">  -->
         <button>Register Volunteer</button>
-        <!-- </a> -->
     </form>
     
     <br>
 
     <form action="../../Private/p_register_user/registerngo.php" method="post">
-        <!-- <a href="../../Private/p_register_user/registerngo.php"> -->
         <button>Register NGO</button>
-        <!-- </a>-->
     </form>
 
 </body>

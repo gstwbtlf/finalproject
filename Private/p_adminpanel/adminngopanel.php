@@ -13,11 +13,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="adminpanel.css">
 </head>
 
 <body>
+
+    <header class="header-adminpanel">
+        <div class="header-adminpanel-logo">
+            <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
+        </div>
+
+        <nav class="header-adminpanel-right-nav">
+            <ul>
+                <li><form action="../../includes/logout.inc.php" method="post"><button>Logout</button></form></li>
+            </ul>     
+        </nav>
+    </header>
 
     <h3>     
         <?php
@@ -31,10 +44,12 @@
 
     <br>
 
-    <h3> Logout</h3>
-    <form action="../../includes/logout.inc.php" method="post">
-        <button>Logout</button>
-    </form>
+    <!--
+        <h3> Logout</h3>
+        <form action="../../includes/logout.inc.php" method="post">
+            <button>Logout</button>
+        </form>
+    -->
 
     <?php
         //NGO Table listing

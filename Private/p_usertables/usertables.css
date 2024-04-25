@@ -1,29 +1,3 @@
-html {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
-    font-weight: 100;
-    font-style: normal;
-    text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
-}
-
-head {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
-    font-weight: 100;
-    font-style: normal;
-    text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
-}
-
 h1 {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
@@ -48,4 +22,99 @@ body {
     text-transform: none;
     line-height: normal;
     word-spacing: normal;
+}
+
+a {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* CLASSES */
+
+.header-tablespanel {
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-tablespanel-logo {
+    height: fit-content;
+    width: fit-content;
+    padding-left: 10px;
+    display: flex;
+}
+
+.header-tablespanel-logo img {
+    align-self: center;
+}
+
+.header-tablespanel-left-nav {
+    justify-content: left;
+    width: fit-content;
+    height: 70px;
+    display: flex;
+}
+
+.header-tablespanel-left-nav ul {
+    list-style: none;
+    margin-left: 3px;
+    align-self: center;
+}
+
+.header-tablespanel-left-nav ul li {
+    display: inline;
+    float: left;
+}
+
+.header-tablespanel-left-nav ul li button {
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+}
+
+.header-tablespanel-left-nav ul li a {
+    padding: 0 10px 0 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.header-tablespanel-right-nav {
+    justify-content: center;
+    height: 70px;
+    width: fit-content;
+    display: flex;
+    align-content: flex-end;
+}
+
+.header-tablespanel-right-nav ul {
+    list-style: none;
+    margin-left: 3px;
+    align-self: center;
+}
+
+.header-tablespanel-right-nav ul li {
+    display: inline;
+    float: left;
+}
+
+.header-tablespanel-right-nav ul li button {
+    background-color: white;
+    color: black;
+    border: none;
+    outline: none;
+}
+
+.header-tablespanel-right-nav ul li a {
+    padding: 0 10px 0 1px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }

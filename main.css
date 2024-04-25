@@ -2,27 +2,45 @@ h1 {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    font-weight: 100;
     font-style: normal;
     text-align: left;
 }
 
-body {
+h3 {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: 100;
+    font-size: 70px;
+    font-style: normal;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(205, 212, 255);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
     font-style: normal;
     text-align: left;
+
 }
 
 a {
     cursor: pointer;
 }
 
+button {
+    background-color: blueviolet;
+    color: white;
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 /* CLASSES */
 
-.header-register {
+.header-main {
     background-color: white;
     width: 100%;
     height: 60px;
@@ -32,42 +50,42 @@ a {
     align-items: center;
 }
 
-.header-register-logo {
+.header-main-logo {
     height: fit-content;
     width: fit-content;
     padding-left: 10px;
     display: flex;
 }
 
-.header-register-logo img {
+.header-main-logo img {
     align-self: center;
 }
 
-.header-register-left-nav {
+.header-main-left-nav {
     justify-content: left;
     width: fit-content;
     height: 70px;
     display: flex;
 }
 
-.header-register-left-nav ul {
+.header-main-left-nav ul {
     list-style: none;
     margin-left: 3px;
     align-self: center;
 }
 
-.header-register-left-nav ul li {
+.header-main-left-nav ul li {
     display: inline;
     float: left;
 }
 
-.header-register-left-nav ul li a {
+.header-main-left-nav ul li a {
     padding: 0 10px 0 1px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
 
-.header-register-right-nav {
+.header-main-right-nav {
     justify-content: center;
     height: 70px;
     width: fit-content;
@@ -75,18 +93,18 @@ a {
     align-content: flex-end;
 }
 
-.header-register-right-nav ul {
+.header-main-right-nav ul {
     list-style: none;
     margin-left: 3px;
     align-self: center;
 }
 
-.header-register-right-nav ul li {
+.header-main-right-nav ul li {
     display: inline;
     float: left;
 }
 
-.header-register-right-nav ul li a {
+.header-main-right-nav ul li a {
     padding: 0 10px 0 1px;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;

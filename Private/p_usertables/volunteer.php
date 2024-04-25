@@ -12,11 +12,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Portal</title>
+    <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="usertables.css">
 </head>
 
 <body>
+
+    <header class="header-tablespanel">
+        <div class="header-tablespanel-logo">
+            <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
+            <nav class="header-tablespanel-left-nav">
+                <ul>
+                    <li><form action="../p_userpanel/volpanel.php" method="post"><button>Volunteer Profile</button></form></li>
+                </ul>     
+             </nav>
+        </div>
+
+        <nav class="header-tablespanel-right-nav">
+            <ul>
+                <li><form action="../../includes/logout.inc.php" method="post"><button>Logout</button></form></li>
+            </ul>     
+        </nav>
+    </header>
+
+
+
     <h3>     
         <?php
             output_username();
@@ -24,9 +45,10 @@
     </h3>
     
     <?php 
-        echo "Volunteer List Page";
+     //   echo "Volunteer List Page";
     ?>   
     
+<!--
     <form action="../p_userpanel/volpanel.php" method="post">
         <button>Volunteer Profile</button>
     </form> 
@@ -35,6 +57,7 @@
     <form action="../../includes/logout.inc.php" method="post">
         <button>Logout</button>
     </form>
+-->
 
     <br>
     
@@ -70,7 +93,7 @@
         }
 
         echo "</table>";
-        ?>
+    ?>
 
 
         <form action="../../includes/contactngo_user.inc.php" method="post">
@@ -80,7 +103,7 @@
         </form> 
 
 
-        <?php
+    <?php
         $pdo = null;
         $stmt = null;
         die();
