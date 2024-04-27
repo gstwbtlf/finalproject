@@ -1,10 +1,19 @@
-h1 {
+h3 {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
-    font-weight: 100;
+    font-size: 20px;
+    font-weight: 1500;
     font-style: normal;
-    text-align: left;
+    text-align: center;
+}
+
+h5 {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: 1500;
+    font-style: normal;
+    text-align: center;
 }
 
 body {
@@ -14,6 +23,10 @@ body {
     font-weight: 100;
     font-style: normal;
     text-align: left;
+}
+
+button {
+    margin-left: 40px;
 }
 
 a {
@@ -103,12 +116,20 @@ a {
 
 .log-vol {
     width: 275px;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0px 50px;
 }
 
 .log-ngo {
     width: 275px;
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0px 50px;
 }
 
 .log-line {

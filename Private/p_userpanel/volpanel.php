@@ -24,17 +24,18 @@
 
         <nav class="header-userpanel-right-nav">
             <ul>
-                <li><form action="../../includes/logout.inc.php" method="post"><button>Logout</button></form></li>
+                <li><form action="../../includes/logout.inc.php" method="post"><button>LOGOUT</button></form></li>
             </ul>     
         </nav>
     </header>
 
-
-    <h3>     
+    <h2>     
         <?php
             output_username();
         ?>
-    </h3>
+    </h2>
+    
+    <br>
 
     <?php 
         //echo "Volunteer Panel Page<br>";
@@ -50,18 +51,28 @@
         $stmtvoluser->execute();
         $resultvoluser = $stmtvoluser->fetch(PDO::FETCH_ASSOC);
 
+    ?>
+
+    <div class="user-profile-form">
+        <div>
+            <h3>
+                Volunteer Account Information
+            </h3>
+    <?php
         echo "Username: " . $resultvoluser["username"] . "<br>";
-        echo "First Name: " . $resultvoluser["firstname"] . "<br>";
-        echo "Last Name: " . $resultvoluser["lastname"] . "<br>";
+        echo "Name: " . $resultvoluser["firstname"] . " " . $resultvoluser["lastname"] . "<br>";
         echo "Phone Number: " . $resultvoluser["phonenum"] . "<br>";
         echo "Email: " . $resultvoluser["email"] . "<br>";
     ?> 
-    
-    <br>
+    </div>
 
-    <form action="../p_usertables/volunteer.php" method="post">
-        <button>NGO List</button>
-    </form>
+    <p></p>
+
+    <div>
+        <form action="../p_usertables/volunteer.php" method="post">
+            <button>View NGO List</button>
+        </form>
+    </div>
 
 <!--
     <h3>Logout</h3>
@@ -69,19 +80,23 @@
         <button>Logout</button>
     </form>
 -->
-    <br>
+
+        <p></p>
+
+        <div>
+            <h3>Delete My Account</h3>
+            WARNING! Account deletion is permanent and unrecoverable.
+            <br>
+
+        </div>
+
+        <div>
+            <form action="../../includes/deletevol_voluser.inc.php" method="post">
+                <button>Delete My Account</button>
+            </form>
+        </div>
+    </div>
     
-    <h3> Delete Account</h3>
-        <?php
-            echo "WARNING! Deleting your account is permanent and all your user information will be deleted.";
-            echo "<br>";
-            echo "Upon sucessful deletion of your account, you will be logged out and sent back to the Login page.";
-        ?>
-    
-    <form action="../../includes/deletevol_voluser.inc.php" method="post">
-        <button>Delete</button>
-    </form>
-   
 </body>
 
 </html>

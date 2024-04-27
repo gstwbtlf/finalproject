@@ -1,10 +1,19 @@
-h1 {
+h3 {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
-    font-weight: 100;
+    font-size: 20px;
+    font-weight: 1500;
     font-style: normal;
-    text-align: left;
+    text-align: center;
+}
+
+h4 {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: 1500;
+    font-style: normal;
+    text-align: center;
 }
 
 body {
@@ -16,43 +25,14 @@ body {
     text-align: left;
 }
 
-main {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    font-style: normal;
-    text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
-}
-
 form {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    font-weight: 100;
+    font-size: 18px;
+    font-weight: 500;
     font-style: normal;
     text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
-}
-
-label {
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: 100;
-    font-style: normal;
-    text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
+    line-height: 1.5;
 }
 
 a {
@@ -109,7 +89,8 @@ button {
     background-color: white;
     color: black;
     border: none;
-    outline: none;
+    outline: none;    
+    text-decoration: underline;
 }
 
 .header-registeruser-left-nav ul li a {
@@ -142,10 +123,21 @@ button {
     color: black;
     border: none;
     outline: none;
+    text-decoration: underline;
 }
 
 .header-registeruser-right-nav ul li a {
     padding: 0 10px 0 1px;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.registration-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 50px;
 }

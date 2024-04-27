@@ -24,14 +24,14 @@
             <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
             <nav class="header-tablespanel-left-nav">
                 <ul>
-                    <li><form action="../p_userpanel/ngopanel.php" method="post"><button>NGO Profile</button></form></li>
+                    <li><form action="../p_userpanel/ngopanel.php" method="post"><button>NGO PROFILE</button></form></li>
                 </ul>     
              </nav>
         </div>
 
         <nav class="header-tablespanel-right-nav">
             <ul>
-                <li><form action="../../includes/logout.inc.php" method="post"><button>Logout</button></form></li>
+                <li><form action="../../includes/logout.inc.php" method="post"><button>LOGOUT</button></form></li>
             </ul>     
         </nav>
     </header>
@@ -57,12 +57,19 @@
         <button>Logout</button>
     </form>
  -->
+
     <br>
 
+    <!--
+        //Volunteer Table listing
+    -->
+        <div class="user-panel-form">
+            Volunteer Information
+        </div>
+
     <?php
-    //Volunteer Table listing
         echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>ID #</th><th>Firstname</th><th>Lastname</th><th>Phone Number</th><th>Email</th><th>Education</th><th>Area of Interest</th><th>Volunteer Hours</th><th>Background Check</th><th>Availability</th><th>Website</th></tr>";
+        echo "<tr><th>GL #</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Email</th><th>Education</th><th>Area of Interest</th><th>Volunteer Hours</th><th>Background Check</th><th>Availability</th><th>Website</th></tr>";
 
         class TableRows extends RecursiveIteratorIterator {
             function __construct($it) {
@@ -90,22 +97,40 @@
             echo $v;
         }
 
-        $pdo = null;
         echo "</table>";
     ?>
+            
+        <p></p>
 
-        <form action="../../includes/contactvol_user.inc.php" method="post">
-        <label for="voluser_id">Volunter ID to Contact</label>
-        <input id="voluser_id" type="text" name="voluser_id" placeholder="Volunteer ID to Contact">
-        <button>Contact NGO</button>
-        </form> 
+        <div class="user-form-table">
+            <form action="../../includes/contactvol_user.inc.php" method="post">
+                <table>
+                    <th>Make Contact</th>
+                        <tr>
+                            <td><label for="voluser_id">Enter the GuardianLink # of the <br>Volunteer you wish to contact.</label></td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <input id="voluser_id" type="text" name="voluser_id" placeholder="GL #" size="3"></td>
+                        </tr>
+                        <tr>
+                            <td align="center"><button>Contact Volunteer</button></td>
+                        </tr>
+                </table>
+            </form> 
+        </div>
+
     <?php
+        $pdo = null;
+        $stmt = null;
+        die();
+
         /*
 } else{
     header("Location: ../p_forbidden/forbidden.php");
     die();
 }
-        */
+*/
     ?>
 
 </body>

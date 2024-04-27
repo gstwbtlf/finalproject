@@ -19,15 +19,15 @@
             <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
             <nav class="header-about-left-nav">
                 <ul>
-                    <li><a href="../..">Home</a></li>
+                    <li><a href="../..">HOME</a></li>
                 </ul>     
              </nav>
         </div>
 
         <nav class="header-about-right-nav">
             <ul>
-                <li><a href="../p_register/register.php">Register</a></li>
-                <li><a href="../p_login/login.php">Login</a></li>
+                <li><a href="../p_register/register.php">REGISTER</a></li>
+                <li><a href="../p_login/login.php">LOGIN</a></li>
             </ul>     
         </nav>
     </header>

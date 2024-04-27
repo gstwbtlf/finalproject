@@ -66,14 +66,14 @@
                         <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
                         <nav class="header-registeruser-left-nav">
                             <ul>
-                            <li><form action="../p_adminpanel/adminngopanel.php" method="post"><button>Admin Panel</button></form></li>
+                            <li><form action="../p_adminpanel/adminngopanel.php" method="post"><button>ADMIN PANEL</button></form></li>
                             </ul>     
                         </nav>
                     </div>
 
                     <nav class="header-registeruser-right-nav">
                         <ul>
-                            <li><form action="../../includes/logout.inc.php" method="post"><button>Logout</button></form></li>
+                            <li><form action="../../includes/logout.inc.php" method="post"><button>LOGOUT</button></form></li>
                         </ul>     
                     </nav>
                 </header>
@@ -125,77 +125,81 @@
     <?php
     }
 
-    echo "NGO Register Page";
+    //echo "NGO Register Page";
 
-    echo "<br>";
+    //echo "<br>";
     ?>   
  
-    <br>  
+    <br>
 
-    <main>
-        <form action="../../includes/registerngo.inc.php" method="post">
-            <label for="username">Username?</label>
-            <input id="username" type="text" name="username" placeholder="Username">
-
-            <br>
-
-            <label for="firstname">Point of Contact First Name?</label>
-            <input id="firstname" type="text" name="firstname" placeholder="Point of Contact First Name">
-
-            <br>
-
-            <label for="lastname">Point of Contact Last Name?</label>
-            <input id="lastname" type="text" name="lastname" placeholder="Point of Contact Last Name">
-
-            <br>
-
-            <label for="orgname">Organization Name?</label>
-            <input id="orgname" type="text" name="orgname" placeholder="Organization Name">
-
-            <br>
-
-            <label for="email">Point of Contact Email?</label>
-            <input id="email" type="email" name="email" placeholder="Point of Contact Email">
-
-            <br>
-
-            <label for="phonenum">Point of Contact Phone Number?</label>
-            <input id="phonenum" type="text" name="phonenum" placeholder="Point of Contact Phone Number">
-
-            <br>
-        
-            <label for="pswd">Password?</label>
-            <input id="pswd" type="text" name="pswd" placeholder="Password">
-
-            <br>
-
-            <label for="ngoneeds">Areas of Concern?</label>
-            <select id="ngoneeds" name="ngoneeds">
-                <option value="Concern 1">Concern 1</option>
-                <option value="Concern 2">Concern 2</option>
-                <option value="Concern 3">Concern 3</option>
-                <option value="Concern 4">Concern 4</option>
-            </select>
-
-            <br>
-        
-            <label for="missionstmt">Company Mission Statement</label>
-            <input id="missionstmt" type="text" name="missionstmt" placeholder="Company Mission Statement">
-
-            <br>
-        
-            <label for="website">Company Website URL</label>
-            <input id="website" type="text" name="website" placeholder="Company Website URL">
-
-            <br>
-
-            <button type="submit">Register</button>
+    <div class="registration-form">
+        <h3>NGO REGISTRATION PAGE</h3>
+        <br>
+        <form action="../../includes/registerngo.inc.php" method="post"></td>
+            <table>
+                <tr>
+                    <td align="right"><label for="username">Username:</label></td>
+                    <td align="left"><input id="username" type="text" name="username" placeholder="Username"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="firstname">Point of Contact First Name:</label></td>
+                    <td align="left"><input id="firstname" type="text" name="firstname" placeholder="First Name"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="lastname">Point of Contact Last Name:</label></td>
+                    <td align="left"><input id="lastname" type="text" name="lastname" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="orgname">Organization Name:</label></td>
+                    <td align="left"><input id="orgname" type="text" name="orgname" placeholder="Organization Name"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="email">Point of Contact Email:</label></td>
+                    <td align="left"><input id="email" type="email" name="email" placeholder="Email"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="phonenum">Point of Contact Phone Number:</label></td>
+                    <td align="left"><input id="phonenum" type="text" name="phonenum" placeholder="Phone Number"></td>
+                <tr>
+                </tr>
+                    <td align="right"><label for="pswd">Password:</label></td>
+                    <td align="left"><input id="pswd" type="text" name="pswd" placeholder="Password"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="ngoneeds">Areas of Concern:</label></td>
+                    <td><select id="ngoneeds" name="ngoneeds">
+                        <option value="Ransomware">Ransomware</option>
+                        <option value="SQL Injection">SQL Injection</option>
+                        <option value="Cross-site Scripting">Cross-site Scripting</option>
+                        <option value="DDOS Attacks">DDOS Attacks</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="missionstmt">Company Mission Statement:</label></td>
+                    <td align="left"><input id="missionstmt" type="text" name="missionstmt" placeholder="Company Mission Statement"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="website">Company Website URL:</label></td>
+                    <td align="left"><input id="website" type="text" name="website" placeholder="Company Website URL"></td>
+                </tr>
+                <tr>
+                    <td><br>
+                    </td> 
+                </tr>
+                <tr>
+                    <td align="right"><button type="submit">Register</button></td>
+                </tr>
+            </table>
         </form>
 
+
+        <h4>
     <?php
             checkngo_register_errors();
     ?>
-    </main>
+        </h4>
+
+    </div>
 
 </body>
 

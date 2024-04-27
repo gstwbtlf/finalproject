@@ -6,12 +6,14 @@ h1 {
     text-align: left;
 }
 
-h3 {
+h4 {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 70px;
+    font-size: 50px;
     font-style: normal;
     text-align: center;
+    position: relative;
+    top: -100px;
 }
 
 body {
@@ -29,12 +31,13 @@ a {
 }
 
 button {
-    background-color: blueviolet;
-    color: white;
+    background-color: rgb(243, 214, 84);
+    color: black;
     height: 50px;
     width: 200px;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
+    border-color: black;
 }
 
 
@@ -108,4 +111,16 @@ button {
     padding: 0 10px 0 1px;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.GLlogo {
+    background-image: url(assets/logos/GL_Logo_Large.png);
+    width: 900px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    left: 200px;
+    top: 75px;
 }

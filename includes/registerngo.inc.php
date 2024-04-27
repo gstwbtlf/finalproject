@@ -24,22 +24,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         //checks if all input fields in registration form has been filled with info
         if (isngo_input_empty($username, $firstname, $lastname, $pswd, $email, $phonenumber, $website, $organizationname, $missionstmt)) {
-            $errors["empty_input"] = "Fill in all fields!";
+            $errors["empty_input"] = "Error! Fill in all fields!";
         }
 
         //if valid email submitted
         if (isngo_email_invalid($email)) {
-            $errors["invalid_email"] = "Invalid email used!";
+            $errors["invalid_email"] = "Error! Invalid email used!";
         }
 
         //if username is already taken
         if (isngo_username_taken($pdo, $username)) {
-            $errors["username_taken"] = "Username already taken!";
+            $errors["username_taken"] = "Error! Username already taken!";
         }
 
         //if email is already registered
         if (isngo_email_registered($pdo, $email)) {
-            $errors["email_used"] = "Email already registered!";
+            $errors["email_used"] = "Error! Email already registered!";
         }
 
 

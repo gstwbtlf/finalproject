@@ -20,30 +20,42 @@
             <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
             <nav class="header-register-left-nav">
                 <ul>
-                    <li><a href="../..">Home</a></li>
-                    <li><a href="../p_about/about.php">About</a></li>
+                    <li><a href="../..">HOME</a></li>
+                    <li><a href="../p_about/about.php">ABOUT US</a></li>
                 </ul>     
              </nav>
         </div>
 
         <nav class="header-register-right-nav">
             <ul>
-                <li><a href="../p_login/login.php">Login</a></li>
+                <li><a href="../p_login/login.php">LOGIN</a></li>
             </ul>     
         </nav>
     </header>
 
     <br>
-
-    <form action="../../Private/p_register_user/registervol.php" method="post">
-        <button>Register Volunteer</button>
-    </form>
-    
+    <br>
+    <br>
+    <br>
     <br>
 
-    <form action="../../Private/p_register_user/registerngo.php" method="post">
-        <button>Register NGO</button>
-    </form>
+    <div class="register-form">
+        <div class="register-vol">
+            <h3>I AM A VOLUNTEER</h3>
+            <form action="../../Private/p_register_user/registervol.php" method="post">
+                <button>Register Volunteer</button>
+            </form>
+        </div>
+    
+        <div class="register-line"> </div>
+
+        <div class="register-ngo">
+            <h3>I AM A NGO</h3>
+            <form action="../../Private/p_register_user/registerngo.php" method="post">
+                <button>Register NGO</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 

@@ -9,11 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         require_once 'config_session.inc.php';
         require_once 'dbh.inc.php';
 
-        if($vol_id != 1){
+        if($vol_id != 1 && !empty($vol_id)){
             $query = "DELETE FROM glvolusers WHERE id=$vol_id";
             $pdo->exec($query);
 
-            header("Location: ../Private/p_adminpanel/adminngopanel.php");
+            header("Location: ../Private/p_adminpanel/adminvolpanel.php");
 
             //close connections
             $pdo = null;
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             die();
 
         } else{
-            header("Location: ../Private/p_adminpanel/adminngopanel.php");
+            header("Location: ../Private/p_adminpanel/adminvolpanel.php");
         }
 
     } catch (PDOException $e) {

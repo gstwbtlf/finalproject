@@ -24,20 +24,21 @@
 
         <nav class="header-userpanel-right-nav">
             <ul>
-                <li><form action="../../includes/logout.inc.php" method="post"><button>Logout</button></form></li>
+                <li><form action="../../includes/logout.inc.php" method="post"><button>LOGOUT</button></form></li>
             </ul>     
         </nav>
     </header>
 
-    <h3>     
+    <h2>     
         <?php
             output_username();
         ?>
-    </h3>
+    </h2>
 
+    <br>
 
     <?php 
-        echo "NGO Panel Page<br>";
+        //echo "NGO Panel Page<br>";
 
 
         //ngo id
@@ -49,18 +50,29 @@
         $stmtngouser->bindParam(":id", $ngouser_id);
         $stmtngouser->execute();
         $resultngouser = $stmtngouser->fetch(PDO::FETCH_ASSOC);
+    ?>
 
-        echo "Username: " . $resultngouser["username"] . "<br>";
-        echo "First Name: " . $resultngouser["firstname"] . "<br>";
-        echo "Last Name: " . $resultngouser["lastname"] . "<br>";
-        echo "Organization Name: " . $resultngouser["orgname"] . "<br>";
-        echo "Phone Number: " . $resultngouser["phonenum"] . "<br>";
-        echo "Email: " . $resultngouser["email"] . "<br>";
+    <div class="user-profile-form">
+        <div>
+            <h3>
+                NGO Account Information
+            </h3>
+    <?php
+            echo "Username: " . $resultngouser["username"] . "<br>";
+            echo "Contact Name: " . $resultngouser["firstname"] . " " . $resultngouser["lastname"] . "<br>";
+            echo "Organization Name: " . $resultngouser["orgname"] . "<br>";
+            echo "Phone Number: " . $resultngouser["phonenum"] . "<br>";
+            echo "Email: " . $resultngouser["email"] . "<br>";
     ?>   
+        </div>
 
-    <form action="../p_usertables/ngo.php" method="post">
-        <button>Volunteer List</button>
-    </form>
+        <p></p>
+
+        <div>
+            <form action="../p_usertables/ngo.php" method="post">
+                <button>View Volunteer List</button>
+            </form>
+        </div>
 
 <!--
     <h3>Logout</h3>
@@ -69,18 +81,21 @@
     </form>
 -->
 
-    <br>
-        
-    <h3>Delete Account</h3>
-    <?php
-        echo "WARNING! Deleting your account is permanent and all your user information will be deleted.";
-        echo "<br>";
-        echo "Upon sucessful deletion of your account, you will be logged out and sent back to the Login page.";
-    ?>
+        <p></p>
 
-    <form action="../../includes/deletengo_ngouser.inc.php" method="post">
-        <button>Delete</button>
-    </form>
+        <div>
+            <h3>Delete My Account</h3>
+            WARNING! Account deletion is permanent and unrecoverable.
+            <br>
+
+        </div>
+
+        <div>
+            <form action="../../includes/deletengo_ngouser.inc.php" method="post">
+                <button>Delete Account</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 

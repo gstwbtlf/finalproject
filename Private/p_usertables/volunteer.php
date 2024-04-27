@@ -24,18 +24,17 @@
             <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
             <nav class="header-tablespanel-left-nav">
                 <ul>
-                    <li><form action="../p_userpanel/volpanel.php" method="post"><button>Volunteer Profile</button></form></li>
+                    <li><form action="../p_userpanel/volpanel.php" method="post"><button>VOLUNTEER PROFILE</button></form></li>
                 </ul>     
              </nav>
         </div>
 
         <nav class="header-tablespanel-right-nav">
             <ul>
-                <li><form action="../../includes/logout.inc.php" method="post"><button>Logout</button></form></li>
+                <li><form action="../../includes/logout.inc.php" method="post"><button>LOGOUT</button></form></li>
             </ul>     
         </nav>
     </header>
-
 
 
     <h3>     
@@ -61,10 +60,16 @@
 
     <br>
     
-    <?php
+    <!--
         //NGO Table listing
+    -->
+        <div class="user-panel-form">
+            NGO Information
+        </div>
+
+        <?php
         echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>ID #</th><th>Firstname</th><th>Lastname</th><th>Organization Name</th><th>Phone Number</th><th>Email</th><th>Mission Statement</th><th>Org Needs</th><th>Website</th></tr>";
+        echo "<tr><th>GL #</th><th>First Name</th><th>Last Name</th><th>Organization Name</th><th>Phone Number</th><th>Email</th><th>Mission Statement</th><th>Company Needs</th><th>Website</th></tr>";
 
         class TableRows extends RecursiveIteratorIterator {
             function __construct($it) {
@@ -95,13 +100,25 @@
         echo "</table>";
     ?>
 
+        <p></p>
 
-        <form action="../../includes/contactngo_user.inc.php" method="post">
-            <label for="ngouser_id">NGO ID to Contact</label>
-            <input id="ngouser_id" type="text" name="ngouser_id" placeholder="NGO ID to Contact">
-            <button>Contact NGO</button>
-        </form> 
-
+        <div class="user-form-table">
+            <form action="../../includes/contactngo_user.inc.php" method="post">
+                <table>
+                    <th>Make Contact</th>
+                    <tr>
+                        <td><label for="ngouser_id">Enter the GuardianLink # of <br>the NGO you wish to contact.</label></td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <input id="ngouser_id" type="text" name="ngouser_id" placeholder="GL #" size="3"></td>
+                    </tr>
+                    <tr>
+                    <td align="center"><button>Contact NGO</button></td>
+                    </tr>
+                </table>
+            </form> 
+        </div>
 
     <?php
         $pdo = null;
@@ -119,4 +136,3 @@
 </body>
 
 </html>
-

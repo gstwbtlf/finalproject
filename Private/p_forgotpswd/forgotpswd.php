@@ -37,23 +37,49 @@
             </nav>
         </header>
 
-    <form action="../../includes/fpswd_inc.php" method="post">
-        <label for="username">Username</label>
-        <input type="text" name="username" placeholder="Username">
-        
         <br>
-        
-        <label for="email">Email</label>
-        <input type="text" name="email" placeholder="Email"> 
-        
         <br>
-        
-        <button>Submit</button>
-    </form>
 
+    <div class="forgot-pswd-form">
+        <h3>FORGOT MY PASSWORD</h3>
+        
+        <div class="fpswdwarning">
+            Please fill out the following form.
+            <br>
+        </div>
+            .
+        <div class="fpswdwarning">
+            Hit the Submit button to send an internal system email
+            <br>
+            to the administrator requesting a password reset.
+        </div>
+            .
+            <br>
+            .
+        <form action="../../includes/fpswd_inc.php" method="post">
+            <table>
+                <tr>
+                    <td align="right"><label for="username">Username</label></td>
+                    <td align="left"><input type="text" name="username" placeholder="Username"></td>
+                </tr>
+                <tr>
+                    <td align="right"><label for="email">Email</label></td>
+                    <td align="left"><input type="text" name="email" placeholder="Email">   </td> 
+                </tr>
+                <tr>
+                    <td><br>
+                    </td> 
+                </tr> 
+            </table>
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <h4>
     <?php
         check_fpswd_errors();
     ?>
+    </h4>
 
 </body>
 

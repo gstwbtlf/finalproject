@@ -1,10 +1,10 @@
-h1 {
+h3 {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 1500;
     font-style: normal;
-    text-align: left;
+    text-align: center;
 }
 
 body {
@@ -14,6 +14,10 @@ body {
     font-weight: 100;
     font-style: normal;
     text-align: left;
+}
+
+button {
+    margin-left: 35px;
 }
 
 a {
@@ -90,4 +94,28 @@ a {
     padding: 0 10px 0 1px;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.register-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 50px;
+}
+
+.register-vol {
+    width: 275px;
+}
+
+.register-ngo {
+    width: 275px;
+}
+
+.register-line {
+    background-color: black;
+    width: 2px;
+    height: 250px;
 }

@@ -18,23 +18,28 @@
             <img src="assets/logos/GL_Logo.png" alt = "GL Logo">
             <nav class="header-main-left-nav">
                 <ul>
-                    <li><a href="Public/p_about/about.php">About</a></li>
+                    <li><a href="Public/p_about/about.php">ABOUT US</a></li>
                 </ul>     
              </nav>
         </div>
 
         <nav class="header-main-right-nav">
             <ul>
-                <li><a href="Public/p_register/register.php">Register</a></li>
-                <li><a href="Public/p_login/login.php">Login</a></li>
+                <li><a href="Public/p_register/register.php">REGISTER</a></li>
+                <li><a href="Public/p_login/login.php">LOGIN</a></li>
             </ul>     
         </nav>
     </header>
 
-    <h3>GuardianLink</h3>
+    <div class="GLlogo">
+    </div>
+
+    <div>
+        <h4>Bridging the Gap.</h4>
+    </div>
+    
     <br>
     
-
 </body>
 
 </html>

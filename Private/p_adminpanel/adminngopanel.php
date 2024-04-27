@@ -27,7 +27,7 @@
 
         <nav class="header-adminpanel-right-nav">
             <ul>
-                <li><form action="../../includes/logout.inc.php" method="post"><button>Logout</button></form></li>
+                <li><form action="../../includes/logout.inc.php" method="post"><button>LOGOUT</button></form></li>
             </ul>     
         </nav>
     </header>
@@ -39,7 +39,7 @@
     </h3>
 
     <?php 
-        echo "Admin NGO Panel Page";
+        //echo "Admin NGO Panel Page";
     ?>    
 
     <br>
@@ -51,11 +51,17 @@
         </form>
     -->
 
-    <?php
+    <!--
         //NGO Table listing
-        echo "NGO Users";
+    -->
+        <div class="admin-panel-form">
+            NGO Users
+        </div>
+        
+
+    <?php
         echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>ID #</th><th>Username</th><th>Firstname</th><th>Lastname</th><th>Organization Name</th><th>Phone Number</th><th>Email</th><th>Mission Statement</th><th>Org Needs</th><th>Website</th></tr>";
+        echo "<tr><th>ID #</th><th>Username</th><th>First Name</th><th>Last Name</th><th>Organization Name</th><th>Phone Number</th><th>Email</th><th>Mission Statement</th><th>Org Needs</th><th>Website</th></tr>";
 
         class TableRowsNGO extends RecursiveIteratorIterator {
             function __construct($it) {
@@ -87,34 +93,46 @@
         $stmtNGO = null;
         
         echo "<br>";
-        echo "<br>";
     ?>
 
-        <form action="../p_register_user/registerngo.php" method="post">
-            <button>Create New NGO User</button>
-        </form>
+<div class="admin-users-panel-form">     
+            <table>
+                <th>Admin Controls (NGOs)</th>
+                <tr>
+                    <form action="../p_register_user/registerngo.php" method="post">
+                        <td align="right"><label for="registerngoadm">New NGO</label></td>
+                        <td align="left"><button>New NGO</button></td>
+                    </form>
+                </tr>  
+                <tr>
+                    <form action="" method="post">
+                        <td align="right"><label for="editngoadm">Edit NGO</label></td>
+                        <td align="left"><button>Edit NGO</button></td>
+                    </form>
+                </tr>
+                <tr>
+                    <form action="../../includes/deleteadm_ngouser.inc.php" method="post">
+                        <td align="right"><label for="deletengoadm">Delete NGO</label>
+                        <input id="deletengoadm" type="text" name="deletengoadm" placeholder="ID #" size="2"></td>
+                        <td align="left"><button>Delete NGO</button></td>
+                    </form>
+                </tr>
+            </table>
+        </div>
 
         <br>
 
-        <form action="../../includes/deleteadm_ngouser.inc.php" method="post">
-            <label for="deletengoadm">NGO ID to Delete</label>
-            <input id="deletengoadm" type="text" name="deletengoadm" placeholder="NGO ID to Delete">
-            <button>Delete NGO User</button>
-        </form>
-
-        <br>
-
-        <form action="" method="post">
-            <label for="editngoadm">Edit NGO User</label>
-            <button>Edit NGO User</button>
-        </form>
+    <!--       
+        //Volunteer Table listing
+    -->
+    
+    <div class="admin-panel-form">
+        Volunteer Users
+    </div>
 
     <?php
-
-        //Volunteer Table listing
-        echo "Volunteer Users";
         echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>ID #</th><th>Username</th><th>Firstname</th><th>Lastname</th><th>Phone Number</th><th>Email</th><th>Education</th><th>Area of Interest</th><th>Volunteer Hours</th><th>Background Check</th><th>Availability</th><th>Website</th></tr>";
+        echo "<tr><th>ID #</th><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Email</th><th>Education</th><th>Area of Interest</th><th>Volunteer Hours</th><th>Background Check</th><th>Availability</th><th>Website</th></tr>";
 
         class TableRowsVOL extends RecursiveIteratorIterator {
             function __construct($it) {
@@ -149,26 +167,30 @@
 
         <br>
 
-        <form action="../../includes/deleteadm_voluser.inc.php" method="post">
-            <label for="deletevoladm">NGO ID to Delete</label>
-            <input id="deletevoladm" type="text" name="deletevoladm" placeholder="Volunteer ID to Delete">
-            <button>Delete Volunteer User</button>
-        </form>
-    
-        <br>
-
-        <form action="../p_register_user/registervol.php" method="post">
-            <label for="registervoladm">Create New Volunteer</label>
-            <button>Create New Volunteer User</button>
-        </form>
-    
-        <br>
-
-        <form action="" method="post">
-            <label for="editvoladm">Edit Volunteer User</label>
-            <button>Edit Volunteer User</button>
-        </form>
-
+        <div class="admin-users-panel-form">     
+            <table>
+                <th>Admin Controls (VOLs)</th>
+                <tr>
+                    <form action="../p_register_user/registervol.php" method="post">
+                        <td align="right"><label for="registervoladm">New Volunteer</label></td>
+                        <td align="left"><button>New Volunteer</button></td>
+                    </form>
+                </tr>
+                <tr>
+                    <form action="" method="post">
+                        <td align="right"><label for="editvoladm">Edit Volunteer</label></td>
+                        <td align="left"><button>Edit Volunteer</button></td>
+                    </form>
+                </tr>
+                <tr>
+                    <form action="../../includes/deleteadm_voluser.inc.php" method="post">
+                        <td align="right"><label for="deletevoladm">Delete Volunteer</label>
+                        <input id="deletevoladm" type="text" name="deletevoladm" placeholder="ID #" size="2"></td>
+                        <td align="left"><button>Delete Volunteer</button></td>
+                    </form>
+                </tr>
+            </table>
+        </div>
         <br>
 
     <?php

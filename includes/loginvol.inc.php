@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         //checks if all input fields in registration form has been filled with info
         if (is_input_empty($username, $pswd)) {
-            $errors["empty_input"] = "Fill in all fields!";
+            $errors["empty_input"] = "Error! Fill in all fields!";
         }
 
         //grab user data
@@ -26,12 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
         //wrong username
         if (is_username_wrong($result)) {
-            $errors["login_incorrect"] = "Username invalid!";
+            $errors["login_incorrect"] = "Error! Username invalid!";
         }
 
         //wrong password
         if (!is_username_wrong($result) && is_password_wrong($pswd, $result["pswd"])) {
-            $errors["login_incorrect"] = "Incorrect password!";
+            $errors["login_incorrect"] = "Error! Incorrect password!";
         }
 
         //start session

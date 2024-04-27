@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         require_once 'config_session.inc.php';
         require_once 'dbh.inc.php';
 
-        if($ngo_id != 1){
+        if($ngo_id != 1 && !empty($ngo_id)){
             $query = "DELETE FROM glngousers WHERE id=$ngo_id";
             $pdo->exec($query);
     
