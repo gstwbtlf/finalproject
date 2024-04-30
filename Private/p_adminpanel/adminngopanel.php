@@ -32,6 +32,8 @@
         </nav>
     </header>
 
+    <div class="main-doc">
+
     <h3>     
         <?php
             output_username();
@@ -202,6 +204,8 @@
     }
     */
     ?>
+
+</div>
 </body>
 
 </html>

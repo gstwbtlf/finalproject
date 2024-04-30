@@ -31,7 +31,7 @@
             </ul>     
         </nav>
     </header>
-
+    <div class="main-doc">
     <h3>     
         <?php
             output_username();
@@ -48,6 +48,7 @@
             <button>Logout</button>
         </form>
     -->
+
 
 
     <!--
@@ -201,6 +202,8 @@
     }
     */
     ?>
+
+</div>
 </body>
 
 </html>

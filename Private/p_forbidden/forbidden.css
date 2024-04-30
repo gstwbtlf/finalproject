@@ -5,10 +5,6 @@ h1 {
     font-weight: 100;
     font-style: normal;
     text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
 }
 
 body {
@@ -18,10 +14,6 @@ body {
     font-weight: 100;
     font-style: normal;
     text-align: left;
-    text-decoration: none;
-    text-transform: none;
-    line-height: normal;
-    word-spacing: normal;
 }
 
 /* CLASSES */
@@ -45,4 +37,35 @@ body {
 
 .header-forbidden-logo img {
     align-self: center;
+}
+
+.header-forbidden-left-nav {
+    justify-content: left;
+    width: fit-content;
+    height: 70px;
+    display: flex;
+}
+
+.header-forbidden-left-nav ul {
+    list-style: none;
+    margin-left: 3px;
+    align-self: center;
+}
+
+.header-forbidden-left-nav ul li {
+    display: inline;
+    float: left;
+}
+
+.header-forbidden-left-nav ul li a {
+    padding: 0 10px 0 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.forbidden-doc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }

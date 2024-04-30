@@ -46,6 +46,8 @@ button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
 }
 
 .header-userpanel-logo {
@@ -90,6 +92,10 @@ button {
     padding: 0 10px 0 1px;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-doc {
+    margin-top: 75px;
 }
 
 .user-profile-form {

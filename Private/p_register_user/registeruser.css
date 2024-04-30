@@ -54,6 +54,8 @@ button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
 }
 
 .header-registeruser-logo {
@@ -140,4 +142,8 @@ button {
     justify-content: center;
     align-items: center;
     gap: 0px 50px;
+}
+
+.main-doc {
+    margin-top: 75px;
 }

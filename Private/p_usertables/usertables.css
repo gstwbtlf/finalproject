@@ -122,6 +122,10 @@ button {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.main-doc {
+    margin-top: 75px;
+}
+
 .user-panel-form {
     color: black;
     font-weight: bold;

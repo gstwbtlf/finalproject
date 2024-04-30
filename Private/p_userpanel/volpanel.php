@@ -29,6 +29,8 @@
         </nav>
     </header>
 
+    <div class="main-doc">
+
     <h2>     
         <?php
             output_username();
@@ -45,7 +47,7 @@
         $voluser_id = $_SESSION["user_id"];
         
         //user details
-        $queryvoluser = "SELECT username, firstname, lastname, phonenum, email FROM glvolusers WHERE id = :id;";
+        $queryvoluser = "SELECT username, firstname, lastname, phonenum, email, education, availnow, volhours, backcheck, areainterest, website FROM glvolusers WHERE id = :id;";
         $stmtvoluser = $pdo->prepare($queryvoluser);
         $stmtvoluser->bindParam(":id", $voluser_id);
         $stmtvoluser->execute();
@@ -59,10 +61,16 @@
                 Volunteer Account Information
             </h3>
     <?php
-        echo "Username: " . $resultvoluser["username"] . "<br>";
+        //echo "Username: " . $resultvoluser["username"] . "<br>";
         echo "Name: " . $resultvoluser["firstname"] . " " . $resultvoluser["lastname"] . "<br>";
         echo "Phone Number: " . $resultvoluser["phonenum"] . "<br>";
         echo "Email: " . $resultvoluser["email"] . "<br>";
+        echo "Education: " . $resultvoluser["education"] . "<br>";
+        echo "Availability: " . $resultvoluser["availnow"] . "<br>";
+        echo "Weekly Volunteer Hours: " . $resultvoluser["volhours"] . "<br>";
+        echo "Background Check: " . $resultvoluser["backcheck"] . "<br>";
+        echo "Areas of Interest: " . $resultvoluser["areainterest"] . "<br>";
+        echo "LinkedIn Profile: " . $resultvoluser["website"] . "<br>";
     ?> 
     </div>
 
@@ -96,6 +104,8 @@
             </form>
         </div>
     </div>
+
+</div>
     
 </body>
 

@@ -14,18 +14,33 @@
     <header class="header-forbidden">
             <div class="header-forbidden-logo">
                 <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
+                <nav class="header-forbidden-left-nav">
+                <ul>
+                    <li><a href="../..">HOME</a></li>
+                </ul>     
+             </nav>
             </div>
     </header>
 
     <?php 
-        echo "Forbidden Not Authorized Page";
+        //echo "Forbidden Not Authorized Page";
     ?> 
 
     <br>
+    
+    <div class="forbidden-doc">
+        <div>
+            <h1>Forbidden!</h1>
+        </div>
+        
+        <div>
+            <h1>Unauthorized Access!</h1>
+        </div>
 
-    <a href="../.."> 
-        <button>Home</button>
-    </a>
+        <div>
+            <a href="../.."><button>Home</button></a>
+        </div>
+    </div>
 
 </body>
 

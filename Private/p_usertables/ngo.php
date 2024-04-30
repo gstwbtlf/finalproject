@@ -36,6 +36,7 @@
         </nav>
     </header>
 
+    <div class="main-doc">
 
     <h3>     
         <?php
@@ -132,7 +133,7 @@
 }
 */
     ?>
-
+</div>
 </body>
 
 </html>

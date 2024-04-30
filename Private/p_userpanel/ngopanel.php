@@ -29,6 +29,8 @@
         </nav>
     </header>
 
+    <div class="main-doc">
+
     <h2>     
         <?php
             output_username();
@@ -45,7 +47,7 @@
         $ngouser_id = $_SESSION["user_id"];
 
         //user details
-        $queryngouser = "SELECT username, firstname, lastname, orgname, phonenum, email FROM glngousers WHERE id = :id;";
+        $queryngouser = "SELECT username, firstname, lastname, orgname, phonenum, email, missionstmt, ngoneeds, website FROM glngousers WHERE id = :id;";
         $stmtngouser = $pdo->prepare($queryngouser);
         $stmtngouser->bindParam(":id", $ngouser_id);
         $stmtngouser->execute();
@@ -58,11 +60,14 @@
                 NGO Account Information
             </h3>
     <?php
-            echo "Username: " . $resultngouser["username"] . "<br>";
+            //echo "Username: " . $resultngouser["username"] . "<br>";
             echo "Contact Name: " . $resultngouser["firstname"] . " " . $resultngouser["lastname"] . "<br>";
             echo "Organization Name: " . $resultngouser["orgname"] . "<br>";
             echo "Phone Number: " . $resultngouser["phonenum"] . "<br>";
             echo "Email: " . $resultngouser["email"] . "<br>";
+            echo "Company Mission Statement: " . $resultngouser["missionstmt"] . "<br>";
+            echo "Company Needs: " . $resultngouser["ngoneeds"] . "<br>";            
+            echo "Company Website: " . $resultngouser["website"] . "<br>";
     ?>   
         </div>
 
@@ -96,6 +101,8 @@
             </form>
         </div>
     </div>
+
+</div>
 
 </body>
 

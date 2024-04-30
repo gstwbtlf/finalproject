@@ -35,7 +35,7 @@
             </ul>     
         </nav>
     </header>
-
+    <div class="main-doc">
 
     <h3>     
         <?php
@@ -57,6 +57,8 @@
         <button>Logout</button>
     </form>
 -->
+
+
 
     <br>
     
@@ -132,7 +134,7 @@
 }
 */
     ?>
-
+</div>
 </body>
 
 </html>

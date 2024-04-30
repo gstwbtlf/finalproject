@@ -112,15 +112,15 @@
                     <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
                     <nav class="header-registeruser-left-nav">
                         <ul>
-                            <li><a href="../..">Home</a></li>
-                            <li><a href="../../Public/p_about/about.php">About</a></li>
+                            <li><a href="../..">HOME</a></li>
+                            <li><a href="../../Public/p_about/about.php">ABOUT</a></li>
                         </ul>     
                     </nav>
                 </div>
 
                 <nav class="header-registeruser-right-nav">
                     <ul>
-                        <li><a href="../../Public/p_login/login.php">Login</a></li>
+                        <li><a href="../../Public/p_login/login.php">LOGIN</a></li>
                     </ul>     
                 </nav>
             </header>
@@ -133,6 +133,8 @@
         //echo "<br>";
 
     ?> 
+
+<div class="main-doc">
 
     <br>
 
@@ -230,6 +232,7 @@
         ?>
         </h4>
 
+    </div>
     </div>
 
 </body>
