@@ -57,17 +57,49 @@
     <div class="user-profile-form">
         <div>
             <h3>
-                NGO Account Information
+                Account Information
             </h3>
+
+            <table>
+                <tr>
+                    <td align="right"><label>Name:</label></td>
+                    <td align="left"><?php echo $resultngouser["firstname"] . " " . $resultngouser["lastname"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Organization Name:</label></td>
+                    <td align="left"><?php echo $resultngouser["orgname"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Phone Number:</label></td>
+                    <td align="left"><?php echo $resultngouser["phonenum"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Email:</label></td>
+                    <td align="left"><?php echo $resultngouser["email"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Company Mission Statement:</label></td>
+                    <td align="left"><?php echo $resultngouser["missionstmt"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Company Needs:</label></td>
+                    <td align="left"><?php echo $resultngouser["ngoneeds"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>LinkedIn Profile:</label></td>
+                    <td align="left"><?php echo $resultngouser["website"]; ?></td>
+                </tr>
+            </table>
+
     <?php
             //echo "Username: " . $resultngouser["username"] . "<br>";
-            echo "Contact Name: " . $resultngouser["firstname"] . " " . $resultngouser["lastname"] . "<br>";
-            echo "Organization Name: " . $resultngouser["orgname"] . "<br>";
-            echo "Phone Number: " . $resultngouser["phonenum"] . "<br>";
-            echo "Email: " . $resultngouser["email"] . "<br>";
-            echo "Company Mission Statement: " . $resultngouser["missionstmt"] . "<br>";
-            echo "Company Needs: " . $resultngouser["ngoneeds"] . "<br>";            
-            echo "Company Website: " . $resultngouser["website"] . "<br>";
+            //echo "Contact Name: " . $resultngouser["firstname"] . " " . $resultngouser["lastname"] . "<br>";
+           // echo "Organization Name: " . $resultngouser["orgname"] . "<br>";
+            //echo "Phone Number: " . $resultngouser["phonenum"] . "<br>";
+           // echo "Email: " . $resultngouser["email"] . "<br>";
+           // echo "Company Mission Statement: " . $resultngouser["missionstmt"] . "<br>";
+            //echo "Company Needs: " . $resultngouser["ngoneeds"] . "<br>";            
+           // echo "Company Website: " . $resultngouser["website"] . "<br>";
     ?>   
         </div>
 

@@ -14,11 +14,6 @@
     <header class="header-forbidden">
             <div class="header-forbidden-logo">
                 <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
-                <nav class="header-forbidden-left-nav">
-                <ul>
-                    <li><a href="../..">HOME</a></li>
-                </ul>     
-             </nav>
             </div>
     </header>
 

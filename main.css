@@ -11,9 +11,6 @@ h4 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
     font-style: normal;
-    text-align: center;
-    position: relative;
-    top: -100px;
 }
 
 body {
@@ -23,7 +20,6 @@ body {
     font-size: 15px;
     font-style: normal;
     text-align: left;
-
 }
 
 a {
@@ -115,12 +111,19 @@ button {
 
 .GLlogo {
     background-image: url(assets/logos/GL_Logo_Large.png);
-    width: 900px;
-    height: 400px;
-    background-size: cover;
+    width: 700px;
+    height: 150px;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    left: 200px;
-    top: 75px;
+    background-size: contain;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
 }

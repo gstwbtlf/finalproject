@@ -58,19 +58,58 @@
     <div class="user-profile-form">
         <div>
             <h3>
-                Volunteer Account Information
+                Account Information
             </h3>
+
+            <table>
+                <tr>
+                    <td align="right"><label>Name:</label></td>
+                    <td align="left"><?php echo $resultvoluser["firstname"] . " " . $resultvoluser["lastname"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Phone Number:</label></td>
+                    <td align="left"><?php echo $resultvoluser["phonenum"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Email:</label></td>
+                    <td align="left"><?php echo $resultvoluser["email"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Education:</label></td>
+                    <td align="left"><?php echo $resultvoluser["education"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Availability:</label></td>
+                    <td align="left"><?php echo $resultvoluser["availnow"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Weekly Volunteer Hours:</label></td>
+                    <td align="left"><?php echo $resultvoluser["volhours"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Background Check:</label></td>
+                    <td align="left"><?php echo $resultvoluser["backcheck"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>Areas of Expertise:</label></td>
+                    <td align="left"><?php echo $resultvoluser["areainterest"]; ?></td>
+                </tr>
+                <tr>
+                    <td align="right"><label>LinkedIn Profile:</label></td>
+                    <td align="left"><?php echo $resultvoluser["website"]; ?></td>
+                </tr>
+            </table>
     <?php
         //echo "Username: " . $resultvoluser["username"] . "<br>";
-        echo "Name: " . $resultvoluser["firstname"] . " " . $resultvoluser["lastname"] . "<br>";
-        echo "Phone Number: " . $resultvoluser["phonenum"] . "<br>";
-        echo "Email: " . $resultvoluser["email"] . "<br>";
-        echo "Education: " . $resultvoluser["education"] . "<br>";
-        echo "Availability: " . $resultvoluser["availnow"] . "<br>";
-        echo "Weekly Volunteer Hours: " . $resultvoluser["volhours"] . "<br>";
-        echo "Background Check: " . $resultvoluser["backcheck"] . "<br>";
-        echo "Areas of Interest: " . $resultvoluser["areainterest"] . "<br>";
-        echo "LinkedIn Profile: " . $resultvoluser["website"] . "<br>";
+        //echo "Name: " . $resultvoluser["firstname"] . " " . $resultvoluser["lastname"] . "<br>";
+        //echo "Phone Number: " . $resultvoluser["phonenum"] . "<br>";
+        //echo "Email: " . $resultvoluser["email"] . "<br>";
+        //echo "Education: " . $resultvoluser["education"] . "<br>";
+        //echo "Availability: " . $resultvoluser["availnow"] . "<br>";
+        //echo "Weekly Volunteer Hours: " . $resultvoluser["volhours"] . "<br>";
+        //echo "Background Check: " . $resultvoluser["backcheck"] . "<br>";
+        //echo "Areas of Interest: " . $resultvoluser["areainterest"] . "<br>";
+        //echo "LinkedIn Profile: " . $resultvoluser["website"] . "<br>";
     ?> 
     </div>
 

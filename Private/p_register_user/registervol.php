@@ -204,7 +204,7 @@
                     </select></td>
                 </tr>
                 <tr>
-                    <td align="right"><label for="areainterest">Area of Interest:</label>
+                    <td align="right"><label for="areainterest">Area of Expertise:</label>
                     <td><select id="areainterest" name="areainterest">
                         <option value="Ransomware">Ransomware</option>
                         <option value="SQL Injection">SQL Injection</option>

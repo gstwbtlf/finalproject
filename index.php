@@ -31,12 +31,14 @@
         </nav>
     </header>
 
-    <div class="GLlogo">
-    </div>
+    <div class="main-page">
+        <div class="GLlogo">
+        </div>
 
-    <div>
-        <h4>Bridging the Gap.</h4>
-    </div>
+        <div>
+            <h4>Bridging the Gap.</h4>
+        </div>
+</div>
     
     <br>
     
