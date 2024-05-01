@@ -1,6 +1,6 @@
 <?php
 
-echo 'Volunteer Login Handler Page';
+//Volunteer Login Handler Page
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = $_POST["username"];

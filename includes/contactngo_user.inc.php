@@ -1,7 +1,6 @@
 <?php
 
-echo "Contact NGO User";
-echo "<br>";
+//Contact NGO User
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     require_once 'config_session.inc.php';
@@ -29,8 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     try {
-        //$to = $resultngo["email"];
-        $to = "";
+        $to = $resultngo["email"];
         $subject = "Want to Connect";
     
         $txt = "Hello ". $resultNGO["firstname"] . $resultNGO["lastname"] . "," . "<br><br>" . 

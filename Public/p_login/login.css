@@ -10,10 +10,8 @@ h3 {
 h5 {
     color: red;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    font-weight: 1500;
-    font-style: normal;
-    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 body {
@@ -44,6 +42,9 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .header-login-logo {
@@ -141,5 +142,10 @@ a {
 .log-endlinks {
     display: flex;
     flex-direction: column;
+    text-align: center;
+}
+
+.notifications-popup {
+    height: fit-content;
     text-align: center;
 }

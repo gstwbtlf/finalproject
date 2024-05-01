@@ -1,6 +1,6 @@
 <?php
 
-echo 'Volunteer Delete User Page';
+//Volunteer Delete User Page
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     

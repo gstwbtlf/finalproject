@@ -8,7 +8,7 @@ function check_fpswd_errors() {
     if (isset($_SESSION['errors_login'])) {
         $errors = $_SESSION["errors_login"];
 
-        echo '<br>';
+        //echo '<br>';
 
         foreach ($errors as $error) {
             echo '<p>' . $error . '</p>';

@@ -31,18 +31,15 @@
 
     <div class="main-doc">
 
-    <h2>     
-        <?php
+        <h2>     
+<?php
             output_username();
-        ?>
-    </h2>
+?>
+        </h2>
     
-    <br>
+        <br>
 
-    <?php 
-        //echo "Volunteer Panel Page<br>";
-
-        
+<?php   
         //volunteer id
         $voluser_id = $_SESSION["user_id"];
         
@@ -53,98 +50,78 @@
         $stmtvoluser->execute();
         $resultvoluser = $stmtvoluser->fetch(PDO::FETCH_ASSOC);
 
-    ?>
+?>
 
-    <div class="user-profile-form">
-        <div>
-            <h3>
+        <div class="user-profile-form">
+            <div>
+                <h3>
                 Account Information
-            </h3>
+                </h3>
 
-            <table>
-                <tr>
-                    <td align="right"><label>Name:</label></td>
-                    <td align="left"><?php echo $resultvoluser["firstname"] . " " . $resultvoluser["lastname"]; ?></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Phone Number:</label></td>
-                    <td align="left"><?php echo $resultvoluser["phonenum"]; ?></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Email:</label></td>
-                    <td align="left"><?php echo $resultvoluser["email"]; ?></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Education:</label></td>
-                    <td align="left"><?php echo $resultvoluser["education"]; ?></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Availability:</label></td>
-                    <td align="left"><?php echo $resultvoluser["availnow"]; ?></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Weekly Volunteer Hours:</label></td>
-                    <td align="left"><?php echo $resultvoluser["volhours"]; ?></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Background Check:</label></td>
-                    <td align="left"><?php echo $resultvoluser["backcheck"]; ?></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>Areas of Expertise:</label></td>
-                    <td align="left"><?php echo $resultvoluser["areainterest"]; ?></td>
-                </tr>
-                <tr>
-                    <td align="right"><label>LinkedIn Profile:</label></td>
-                    <td align="left"><?php echo $resultvoluser["website"]; ?></td>
-                </tr>
-            </table>
-    <?php
-        //echo "Username: " . $resultvoluser["username"] . "<br>";
-        //echo "Name: " . $resultvoluser["firstname"] . " " . $resultvoluser["lastname"] . "<br>";
-        //echo "Phone Number: " . $resultvoluser["phonenum"] . "<br>";
-        //echo "Email: " . $resultvoluser["email"] . "<br>";
-        //echo "Education: " . $resultvoluser["education"] . "<br>";
-        //echo "Availability: " . $resultvoluser["availnow"] . "<br>";
-        //echo "Weekly Volunteer Hours: " . $resultvoluser["volhours"] . "<br>";
-        //echo "Background Check: " . $resultvoluser["backcheck"] . "<br>";
-        //echo "Areas of Interest: " . $resultvoluser["areainterest"] . "<br>";
-        //echo "LinkedIn Profile: " . $resultvoluser["website"] . "<br>";
-    ?> 
-    </div>
+                <table>
+                    <tr>
+                        <td align="right"><label>Name:</label></td>
+                        <td align="left"><?php echo $resultvoluser["firstname"] . " " . $resultvoluser["lastname"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>Phone Number:</label></td>
+                        <td align="left"><?php echo $resultvoluser["phonenum"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>Email:</label></td>
+                        <td align="left"><?php echo $resultvoluser["email"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>Education:</label></td>
+                        <td align="left"><?php echo $resultvoluser["education"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>Availability:</label></td>
+                        <td align="left"><?php echo $resultvoluser["availnow"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>Weekly Volunteer Hours:</label></td>
+                        <td align="left"><?php echo $resultvoluser["volhours"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>Background Check:</label></td>
+                        <td align="left"><?php echo $resultvoluser["backcheck"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>Areas of Expertise:</label></td>
+                        <td align="left"><?php echo $resultvoluser["areainterest"]; ?></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label>LinkedIn Profile:</label></td>
+                        <td align="left"><?php echo $resultvoluser["website"]; ?></td>
+                    </tr>
+                </table>
+            </div>
 
-    <p></p>
+            <p></p>
 
-    <div>
-        <form action="../p_usertables/volunteer.php" method="post">
-            <button>View NGO List</button>
-        </form>
-    </div>
+            <div>
+                <form action="../p_usertables/volunteer.php" method="post">
+                    <button>View NGO List</button>
+                </form>
+            </div>
 
-<!--
-    <h3>Logout</h3>
-    <form action="../../includes/logout.inc.php" method="post">
-        <button>Logout</button>
-    </form>
--->
+            <p></p>
 
-        <p></p>
+            <div>
+                <h3>Delete My Account</h3>
+                    WARNING! Account deletion is permanent and unrecoverable.
+                <br>
+            </div>
 
-        <div>
-            <h3>Delete My Account</h3>
-            WARNING! Account deletion is permanent and unrecoverable.
-            <br>
-
+            <div>
+                <form action="../../includes/deletevol_voluser.inc.php" method="post">
+                    <button>Delete My Account</button>
+                </form>
+            </div>
         </div>
 
-        <div>
-            <form action="../../includes/deletevol_voluser.inc.php" method="post">
-                <button>Delete My Account</button>
-            </form>
-        </div>
     </div>
-
-</div>
     
 </body>
 

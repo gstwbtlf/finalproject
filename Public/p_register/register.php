@@ -10,11 +10,6 @@
 </head>
 
 <body>
-
-    <?php 
-        //echo "Register Page";
-    ?>
-
     <header class="header-register">
         <div class="header-register-logo">
             <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">

@@ -15,10 +15,6 @@
 </head>
 
 <body>
-    <?php 
-        //echo "Login Page";
-    ?>
-
     <header class="header-login">
         <div class="header-login-logo">
             <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
@@ -36,100 +32,96 @@
             </ul>     
         </nav>
 
-    <!--
-        <form action="../../includes/logout.inc.php" method="post"><button>Logout</button></form>
-    -->  
     </header>
 
-<!--
-    <h3>     
-    <?php
-        //output_username();
-    ?>
-    </h3>
--->    
     <br>
     <br>
     <br>
-
-    <?php
-        if (!isset($_SESSION["user_id"])) { 
-    ?>
-            <div class="log-form">
-                <div class="log-vol">
-                    <h3>VOLUNTEER LOGIN</h3>
-                    <form action="../../includes/loginvol.inc.php" method="post">
-                        <table>
-                            <tr>
-                                <td align="right"><label for="username">Username:</label></td>
-                                <td align="left"><input type="text" name="username" placeholder="Username"></td>
-                            </tr>
-                            <tr>
-                                <td align="right"><label for="pswd">Password:</label></td>
-                                <td align="left"><input type="text" name="pswd" placeholder="Password"></td>
-                            </tr>
+    <br>
+    <br>
+    
+<?php
+    if (!isset($_SESSION["user_id"])) { 
+?>
+        <div class="log-form">
+            <div class="log-vol">
+                <h3>VOLUNTEER LOGIN</h3>
+                <form action="../../includes/loginvol.inc.php" method="post">
+                    <table>
+                        <tr>
+                            <td align="right"><label for="username">Username:</label></td>
+                            <td align="left"><input type="text" name="username" placeholder="Username"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label for="pswd">Password:</label></td>
+                            <td align="left"><input type="text" name="pswd" placeholder="Password"></td>
+                        </tr>
                     <!-- 
                             <input type ="password" id="pswdvol" placeholder="Password">
                             <br>
                             <input type="checkbox" onclick="showVolPswd()">Show Password
                     -->
-                            <tr>
-                                <td><br>
-                                </td> 
-                            </tr>
-                        </table>   
-                                <button>Volunteer Login</button>                       
-                    </form>
-                </div>
+                        <tr>
+                            <td>
+                                <br>
+                            </td> 
+                        </tr>
+                    </table>   
+                    <button>Volunteer Login</button>                       
+                </form>
+            </div>
 
-                <div class="log-line"> </div>
+            <div class="log-line"> </div>
 
-                <div class="log-ngo">
-                    <h3>NGO LOGIN</h3>
-                    <form action="../../includes/loginngo.inc.php" method="post">
-                        <table>
-                            <tr>
-                                <td align="right"><label for="username">Username:</label></td>
-                                <td align="left"><input type="text" name="username" placeholder="Username"></td>
-                            </tr>
-                            <tr>
-                                <td align="right"><label for="pswd">Password:</label></td>
-                                <td align="left"><input type="text" name="pswd" placeholder="Password"></td>
-                            </tr>
+            <div class="log-ngo">
+                <h3>NGO LOGIN</h3>
+                <form action="../../includes/loginngo.inc.php" method="post">
+                    <table>
+                        <tr>
+                            <td align="right"><label for="username">Username:</label></td>
+                            <td align="left"><input type="text" name="username" placeholder="Username"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label for="pswd">Password:</label></td>
+                            <td align="left"><input type="text" name="pswd" placeholder="Password"></td>
+                        </tr>
                     <!--
                             <input type ="password" id="pswdngo" placeholder="Password">
                             <br>
                             <input type="checkbox" onclick="showNgoPswd()">Show Password
                     -->  
-                            <tr>
-                                <td><br>
-                                </td> 
-                            </tr>
-                        </table>                                
-                        <button>NGO Login</button>
+                        <tr>
+                            <td>
+                                <br>
+                            </td> 
+                        </tr>
+                    </table>                                
+                    <button>NGO Login</button>
 
-                    </form>
-                </div>
-            </div> 
-    <?php 
-        } 
-    ?>
+                </form>
+            </div>
+        </div> 
+<?php 
+    } 
+?>
 
-        <br>
+    <br>
 
-        <div class="log-endlinks">
-            <a href="../../Private/p_forgotpswd/forgotpswd.php">Forgot password</a>
+    <div class="log-endlinks">
+        <a href="../../Private/p_forgotpswd/forgotpswd.php">Forgot password</a>
             
-            <p>
-                Don't have an account?
-                <a href="../p_register/register.php">Register now.</a>
-        </div>
+        <p>
+        Don't have an account?
+        <a href="../p_register/register.php">Register now.</a>
+    </div>
 
+    <div class="notifications-popup">
         <h5>
-    <?php
+<?php
             check_login_errors();
-    ?>
+?>
         </h5>
+    </div>
 
 <!--
     //show/hide password field (causing NULL error - to fix later)

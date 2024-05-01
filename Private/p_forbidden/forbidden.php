@@ -17,10 +17,6 @@
             </div>
     </header>
 
-    <?php 
-        //echo "Forbidden Not Authorized Page";
-    ?> 
-
     <br>
     
     <div class="forbidden-doc">

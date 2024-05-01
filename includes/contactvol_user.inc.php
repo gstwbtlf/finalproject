@@ -1,7 +1,6 @@
 <?php
 
-echo "Contact NGO User";
-echo "<br>";
+//Contact NGO User
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     require_once 'config_session.inc.php';
@@ -27,8 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $resultvol = $stmtvol->fetch(PDO::FETCH_ASSOC);
 
     try {
-        //$to = $resultngouser["email"];
-        $to = "";
+        $to = $resultngouser["email"];
         $subject = "Want to Connect";
     
         $txt = "Hello ". $resultvol["firstname"] . $resultvol["lastname"] . "," . "<br><br>" . 

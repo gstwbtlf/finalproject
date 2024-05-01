@@ -1,7 +1,6 @@
 <?php
 
-echo "Forgot Password Email Sender";
-echo "<br>";
+//Forgot Password Email Sender
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = htmlspecialchars($_POST["username"]);
@@ -47,8 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             die();
         }
 
-        //$to = "admin@website.com";
-        $to = " ";
+        $to = "admin@website.com";
         $subject = "Forgot My Password";
     
         $txt = "Hello Administrator!" . "<br><br>" . 

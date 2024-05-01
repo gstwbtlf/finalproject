@@ -1,7 +1,6 @@
 <?php
 
-    //echo "Database Includes Handler File";
-
+    //Database Includes Handler File
 
     //data source name = which database to connect to
     $host = 'localhost';

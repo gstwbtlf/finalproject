@@ -35,32 +35,16 @@
             </ul>     
         </nav>
     </header>
+    
     <div class="main-doc">
 
-    <h3>     
-        <?php
+        <h3>     
+<?php
             output_username();
-        ?>
-    </h3>
+?>
+        </h3>
     
-    <?php 
-     //   echo "Volunteer List Page";
-    ?>   
-    
-<!--
-    <form action="../p_userpanel/volpanel.php" method="post">
-        <button>Volunteer Profile</button>
-    </form> 
-
-    <h3>Logout</h3>
-    <form action="../../includes/logout.inc.php" method="post">
-        <button>Logout</button>
-    </form>
--->
-
-
-
-    <br>
+        <br>
     
     <!--
         //NGO Table listing
@@ -69,7 +53,7 @@
             NGO Information
         </div>
 
-        <?php
+<?php
         echo "<table style='border: solid 1px black;'>";
         echo "<tr><th>GL #</th><th>First Name</th><th>Last Name</th><th>Organization Name</th><th>Phone Number</th><th>Email</th><th>Mission Statement</th><th>Company Needs</th><th>Website</th></tr>";
 
@@ -100,7 +84,7 @@
         }
 
         echo "</table>";
-    ?>
+?>
 
         <p></p>
 
@@ -113,16 +97,16 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            <input id="ngouser_id" type="text" name="ngouser_id" placeholder="GL #" size="3"></td>
+                        <input id="ngouser_id" type="text" name="ngouser_id" placeholder="GL #" size="3"></td>
                     </tr>
                     <tr>
-                    <td align="center"><button>Contact NGO</button></td>
+                        <td align="center"><button>Contact NGO</button></td>
                     </tr>
                 </table>
             </form> 
         </div>
 
-    <?php
+<?php
         $pdo = null;
         $stmt = null;
         die();
@@ -133,8 +117,9 @@
     die();
 }
 */
-    ?>
-</div>
+?>
+    </div>
+
 </body>
 
 </html>

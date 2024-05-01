@@ -6,8 +6,6 @@ function checkngo_register_errors() {
     if (isset($_SESSION['errorsngo_register'])) {
         $errors = $_SESSION['errorsngo_register'];
 
-        echo "<br>";
-
         foreach ($errors as $error){
             echo '<p>' . $error . '</p>';
         }

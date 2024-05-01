@@ -9,10 +9,6 @@
 </head>
 
 <body>
-    <?php 
-        //echo "Home Page";
-    ?>
-
     <header class="header-main">
         <div class="header-main-logo">
             <img src="assets/logos/GL_Logo.png" alt = "GL Logo">
@@ -38,7 +34,7 @@
         <div>
             <h4>Bridging the Gap.</h4>
         </div>
-</div>
+    </div>
     
     <br>
     

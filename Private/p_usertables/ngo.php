@@ -38,28 +38,13 @@
 
     <div class="main-doc">
 
-    <h3>     
-        <?php
+        <h3>     
+<?php
             output_username();
-        ?>
-    </h3>
+?>
+        </h3>
 
-    <?php 
-        //echo "NGO List Page";
-    ?>  
-    
-<!--
-    <form action="../p_userpanel/ngopanel.php" method="post">
-        <button>NGO Profile</button>
-    </form>
-    
-    <h3>Logout</h3>
-    <form action="../../includes/logout.inc.php" method="post">
-        <button>Logout</button>
-    </form>
- -->
-
-    <br>
+        <br>
 
     <!--
         //Volunteer Table listing
@@ -68,9 +53,9 @@
             Volunteer Information
         </div>
 
-    <?php
+<?php
         echo "<table style='border: solid 1px black;'>";
-        echo "<tr><th>GL #</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Email</th><th>Education</th><th>Area of Interest</th><th>Volunteer Hours</th><th>Background Check</th><th>Availability</th><th>Website</th></tr>";
+        echo "<tr><th>GL #</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Email</th><th>Education</th><th>Area of Expertise</th><th>Volunteer Hours</th><th>Background Check</th><th>Availability</th><th>Website</th></tr>";
 
         class TableRows extends RecursiveIteratorIterator {
             function __construct($it) {
@@ -99,7 +84,7 @@
         }
 
         echo "</table>";
-    ?>
+?>
             
         <p></p>
 
@@ -121,7 +106,7 @@
             </form> 
         </div>
 
-    <?php
+<?php
         $pdo = null;
         $stmt = null;
         die();
@@ -132,8 +117,9 @@
     die();
 }
 */
-    ?>
-</div>
+?>
+    </div>
+
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-echo 'NGO Delete User Page';
+//NGO Delete User Page
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     

@@ -1,6 +1,6 @@
 <?php
 
-echo 'NGO Admin Delete Volunteer User Page';
+//NGO Admin Delete Volunteer User Page
 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $vol_id = $_POST["deletevoladm"];

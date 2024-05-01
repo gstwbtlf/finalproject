@@ -6,7 +6,6 @@
     require_once '../../includes/dbh.inc.php';
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,34 +33,22 @@
 
     <div class="main-doc">
 
-    <h3>     
-        <?php
+        <h3>     
+<?php
             output_username();
-        ?>
-    </h3>
-
-    <?php 
-        //echo "Admin NGO Panel Page";
-    ?>    
+?>
+        </h3>  
 
     <br>
-
-    <!--
-        <h3> Logout</h3>
-        <form action="../../includes/logout.inc.php" method="post">
-            <button>Logout</button>
-        </form>
-    -->
 
     <!--
         //NGO Table listing
     -->
         <div class="admin-panel-form">
             NGO Users
-        </div>
-        
+        </div> 
 
-    <?php
+<?php
         echo "<table style='border: solid 1px black;'>";
         echo "<tr><th>ID #</th><th>Username</th><th>First Name</th><th>Last Name</th><th>Organization Name</th><th>Phone Number</th><th>Email</th><th>Mission Statement</th><th>Org Needs</th><th>Website</th></tr>";
 
@@ -95,9 +82,9 @@
         $stmtNGO = null;
         
         echo "<br>";
-    ?>
+?>
 
-<div class="admin-users-panel-form">     
+        <div class="admin-users-panel-form">     
             <table>
                 <th>Admin Controls (NGOs)</th>
                 <tr>
@@ -128,11 +115,11 @@
         //Volunteer Table listing
     -->
     
-    <div class="admin-panel-form">
-        Volunteer Users
-    </div>
+        <div class="admin-panel-form">
+            Volunteer Users
+        </div>
 
-    <?php
+<?php
         echo "<table style='border: solid 1px black;'>";
         echo "<tr><th>ID #</th><th>Username</th><th>First Name</th><th>Last Name</th><th>Phone Number</th><th>Email</th><th>Education</th><th>Area of Interest</th><th>Volunteer Hours</th><th>Background Check</th><th>Availability</th><th>Website</th></tr>";
 
@@ -165,7 +152,7 @@
         $pdo = null;        
         $stmtVOL = null;
         echo "</table>";
-    ?>
+?>
 
         <br>
 
@@ -193,9 +180,10 @@
                 </tr>
             </table>
         </div>
+        
         <br>
 
-    <?php
+<?php
         die();
     /*
     } else{
@@ -203,9 +191,9 @@
         die();
     }
     */
-    ?>
+?>
 
-</div>
+    </div>
 </body>
 
 </html>

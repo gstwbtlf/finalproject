@@ -14,11 +14,7 @@
     <link rel="stylesheet" href="forgotpswd.css">
 </head>
 
-<body>
-    <?php 
-        //echo "Forgot Password Page";
-    ?>  
-        
+<body>     
         <header class="header-forgot">
             <div class="header-forgot-logo">
                 <img src="../../assets/logos/GL_Logo.png" alt = "GL Logo">
@@ -76,9 +72,9 @@
     </div>
 
     <h4>
-    <?php
+<?php
         check_fpswd_errors();
-    ?>
+?>
     </h4>
 
 </body>
